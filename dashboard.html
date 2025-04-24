@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="has-background-white" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>(Weather)Weather</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+</head>
+<body>
+<!-- Navbar with City Dropdown -->
+  <nav class="navbar has-background-white">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <!-- You can add a logo or text here -->
+      </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu is-flex is-justify-content-center">
+      <div class="navbar-item">
+        <a class="navbar-item has-text-grey has-text-centered is-size-4" href="index.html">Home</a>
+        <a class="navbar-item has-text-grey has-text-centered is-size-4" href="dashboard.html">Dashboard</a>
+        <a class="navbar-item has-text-grey has-text-centered is-size-4" href="settings.html">Settings</a>
+
+        <!-- City Dropdown -->
+        <div class="navbar-item">
+          <div class="select is-small">
+            <select id="citySelect">
+              <option value="berlin">Berlin</option>
+              <option value="new_york">Amsterdam</option>
+              <option value="tokyo">Paris</option>
+              <option value="paris">Tromso</option>
+              <option value="tokyo">Cork</option>
+              <option value="paris">Copenhagen</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Add Section + Container for spacing -->
+  <section class="section">
+    <div class="container">
+     <div class="columns is-vcentered is-multiline">
+
+       <!-- Left side: logo -->
+    <div class="column is-2 has-text-left">
+      <figure class="image is-150x150">
+        <img src="images/logo.png" alt="Logo">
+      </figure>
+    </div>
+
+    <!-- Center: Dashboard Title -->
+    <div class="column is-10 has-text-centered has-text-black">
+      <p class="is-size-1"><strong>Dashboard</p></strong>
+      <p class="is-size-4"><strong>Today</p></strong>
+    </div>
+
+
+    <!-- Card 1 -->
+    <div class="column is-4">
+      <section class="card has-background-black has-text-white">
+
+        <header class="card-header">
+          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+            Berlin
+          </p>
+        </header>
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
+            <img src="images/sun.png" alt="Sun Icon">
+          </figure>
+        </div>
+
+        <footer class="card-footer" style="border-top: none;">
+          <p class="card-footer-item has-text-left" style="border: none;">
+            <span class="is-size-5 has-text-white">12°C</span>
+          </p>
+          <p class="card-footer-item has-text-right" style="border: none;">
+            <span class="is-size-5 has-text-white">13°C</span>
+          </p>
+        </footer>
+      </section>
+    </div>      
+
+    <!-- Card 2 -->
+    <div class="column is-4">
+      <section class="card has-background-black has-text-white">
+
+        <header class="card-header">
+          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+            Amsterdam
+          </p>
+        </header>
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
+            <img src="images/sun.png" alt="Sun Icon">
+          </figure>
+        </div>
+
+        <footer class="card-footer" style="border-top: none;">
+          <p class="card-footer-item has-text-left" style="border: none;">
+            <span class="is-size-5 has-text-white">12°C</span>
+          </p>
+          <p class="card-footer-item has-text-right" style="border: none;">
+            <span class="is-size-5 has-text-white">13°C</span>
+          </p>
+        </footer>
+      </section>
+    </div>     
+
+    <!-- Card 3 -->
+    <div class="column is-4">
+      <section class="card has-background-black has-text-white">
+
+        <header class="card-header">
+          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+            Paris
+          </p>
+        </header>
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
+            <img src="images/sun.png" alt="Sun Icon">
+          </figure>
+        </div>
+
+        <footer class="card-footer" style="border-top: none;">
+          <p class="card-footer-item has-text-left" style="border: none;">
+            <span class="is-size-5 has-text-white">12°C</span>
+          </p>
+          <p class="card-footer-item has-text-right" style="border: none;">
+            <span class="is-size-5 has-text-white">13°C</span>
+          </p>
+        </footer>
+      </section>
+    </div>     
+    <!-- Card 4 -->
+    <div class="column is-4">
+      <section class="card has-background-black has-text-white">
+
+        <header class="card-header">
+          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+            Tromso
+          </p>
+        </header>
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
+            <img src="images/sun.png" alt="Sun Icon">
+          </figure>
+        </div>
+
+        <footer class="card-footer" style="border-top: none;">
+          <p class="card-footer-item has-text-left" style="border: none;">
+            <span class="is-size-5 has-text-white">12°C</span>
+          </p>
+          <p class="card-footer-item has-text-right" style="border: none;">
+            <span class="is-size-5 has-text-white">13°C</span>
+          </p>
+        </footer>
+      </section>
+    </div>     
+
+    <!-- Card 5 -->
+    <div class="column is-4">
+      <section class="card has-background-black has-text-white">
+
+        <header class="card-header">
+          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+            Cork
+          </p>
+        </header>
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
+            <img src="images/sun.png" alt="Sun Icon">
+          </figure>
+        </div>
+
+        <footer class="card-footer" style="border-top: none;">
+          <p class="card-footer-item has-text-left" style="border: none;">
+            <span class="is-size-5 has-text-white">12°C</span>
+          </p>
+          <p class="card-footer-item has-text-right" style="border: none;">
+            <span class="is-size-5 has-text-white">13°C</span>
+          </p>
+        </footer>
+      </section>
+    </div>     
+
+    <!-- Card 6 -->
+    <div class="column is-4">
+      <section class="card has-background-black has-text-white">
+
+        <header class="card-header">
+          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+            Copenhagen
+          </p>
+        </header>
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
+            <img src="images/sun.png" alt="Sun Icon">
+          </figure>
+        </div>
+
+        <footer class="card-footer" style="border-top: none;">
+          <p class="card-footer-item has-text-left" style="border: none;">
+            <span class="is-size-5 has-text-white">12°C</span>
+          </p>
+          <p class="card-footer-item has-text-right" style="border: none;">
+            <span class="is-size-5 has-text-white">13°C</span>
+          </p>
+        </footer>
+      </section>
+    </div>     
+  </div>
+</div>
+</section>
+</body>
+</html>
+
