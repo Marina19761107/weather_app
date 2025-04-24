@@ -8,7 +8,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
-    <script src="weather_data.js"></script>
+    <script>
+      // Make weather data available to the template
+      window.weatherData = {{ weather_data | dump | safe }};
+    </script>
+    <script src="/js/components/weather_data.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const currentCity = "berlin";
@@ -19,6 +23,49 @@
         const tempMin = document.getElementById("tempMin");
         const windSpeed = document.getElementById("windSpeed");
         const cityName = document.getElementById("cityName");
+
+        // Set items from weather data
+        const items = weatherData.berlin_daily.daily.time;
+        [{ time, minTemp, maxTemp }];
+        const simpleBoxContainer =
+          document.getElementById("simpleBoxContainer");
+
+        // Clear existing content
+        simpleBoxContainer.innerHTML = "";
+
+        // Create and append simple boxes for each item
+        items.forEach((item) => {
+          const simpleBox = document.createElement("div");
+          simpleBox.className = "column is-2";
+          simpleBox.innerHTML = `
+
+        <section class="card has-background-black has-text-white">
+          <header class="card-header">
+            <p
+              class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
+            >
+              ${item}
+            </p>
+          </header>
+
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/sun.png" alt="Sun Icon" />
+            </figure>
+          </div>
+
+          <footer class="card-footer" style="border-top: none">
+            <p class="card-footer-item has-text-left" style="border: none">
+              <span class="is-size-5 has-text-white">12°C</span>
+            </p>
+            <p class="card-footer-item has-text-right" style="border: none">
+              <span class="is-size-5 has-text-white">13°C</span>
+            </p>
+          </footer>
+        </section>
+          `;
+          simpleBoxContainer.appendChild(simpleBox);
+        });
 
         time.innerHTML = currentCityData.daily.time[0];
         weatherCode.innerHTML = currentCityData.daily.weather_code[0];
@@ -39,7 +86,7 @@
 
         function updateWeather(cityName) {
           const cityData = weatherData[cityName + "_daily"];
-          time.innerHTML = CityData.daily.time[0];
+          time.innerHTML = cityData.daily.time[0];
           weatherCode.innerHTML = cityData.daily.weather_code[0];
           tempMax.innerHTML = cityData.daily.temperature_2m_max[0] + "°C";
           tempMin.innerHTML = cityData.daily.temperature_2m_min[0] + "°C";
@@ -114,14 +161,12 @@
         <h1
           class="title has-text-weight-bold is-size-1 has-text-centered"
           style="margin-top: 70px"
-        >
-          Berlin
-        </h1>
+          id="cityName"
+        ></h1>
         <p
           class="subtitle has-text-weight-bold is-size-3 has has-text-centered"
-        >
-          Today
-        </p>
+          id="time"
+        ></p>
       </div>
 
       <!-- Card 3 -->
@@ -136,7 +181,7 @@
             </h1>
 
             <div class="is-flex is-justify-content-space-between">
-              <p class="subtitle is-size-5 has-text-white">11°C</p>
+              <p class="subtitle is-size-5 has-text-white" id="weatherCode"></p>
               <p class="subtitle is-size-5 has-text-white">10 km/h</p>
             </div>
           </div>
@@ -161,7 +206,7 @@
         >
           <div class="card-content">
             <h1 class="is-size-4 has-text-white mb-6">Max Temp</h1>
-            <p class="is-size-4 has-text-white">12°C</p>
+            <p class="is-size-4 has-text-white" id="tempMax"></p>
           </div>
         </div>
       </div>
@@ -174,7 +219,10 @@
         >
           <div class="card-content">
             <h1 class="is-size-4 has-text-white mb-6">Max Wind</h1>
-            <p class="is-size-4 has-text-white has-text-centered">15 km/h</p>
+            <p
+              class="is-size-4 has-text-white has-text-centered"
+              id="windSpeed"
+            ></p>
           </div>
         </div>
       </div>
@@ -345,6 +393,9 @@
           </footer>
         </section>
       </div>
+    </div>
+    <div class="columns" id="simpleBoxContainer">
+      <!-- Simple boxes will be dynamically inserted here -->
     </div>
   </body>
 </html>
