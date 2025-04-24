@@ -1,0 +1,19 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "A web client for our music streaming service.",
+  "main": "eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy-navigation": "^0.3.5"
+  },
+  "dependencies": {
+    "dependency-graph": "^0.11.0",
+    "nunjucks-to-html": "^1.1.0"
+  }
+}

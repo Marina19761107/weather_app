@@ -1,306 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>(Wheather)Weather</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <script src="weather_data.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const currentCity = "berlin";
-      const currentCityData = weatherData[currentCity + "_daily"]
-      const time = document.getElementById("time");
-      const weatherCode = document.getElementById("weatherCode");
-      const tempMax = document.getElementById("tempMax");
-      const tempMin = document.getElementById("tempMin");
-      const windSpeed = document.getElementById("windSpeed");
-      const cityName = document.getElementById("cityName");
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Wheather)Weather</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script src="weather_data.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentCity = "berlin";
+        const currentCityData = weatherData[currentCity + "_daily"];
+        const time = document.getElementById("time");
+        const weatherCode = document.getElementById("weatherCode");
+        const tempMax = document.getElementById("tempMax");
+        const tempMin = document.getElementById("tempMin");
+        const windSpeed = document.getElementById("windSpeed");
+        const cityName = document.getElementById("cityName");
 
-      time.innerHTML = currentCityData.daily.time[0];
-      weatherCode.innerHTML = currentCityData.daily.weather_code[0];
-      tempMax.innerHTML = currentCityData.daily.temperature_2m_max[0] + "°C";
-      tempMin.innerHTML = currentCityData.daily.temperature_2m_min[0] + "°C";
-      windSpeed.innerHTML = currentCityData.daily.wind_speed_10m_max[0] + " km/h";
-      cityName.innerHTML = `${currentCity.charAt(0).toUpperCase() + currentCity.slice(1)}`;
+        time.innerHTML = currentCityData.daily.time[0];
+        weatherCode.innerHTML = currentCityData.daily.weather_code[0];
+        tempMax.innerHTML = currentCityData.daily.temperature_2m_max[0] + "°C";
+        tempMin.innerHTML = currentCityData.daily.temperature_2m_min[0] + "°C";
+        windSpeed.innerHTML =
+          currentCityData.daily.wind_speed_10m_max[0] + " km/h";
+        cityName.innerHTML = `${
+          currentCity.charAt(0).toUpperCase() + currentCity.slice(1)
+        }`;
 
-       // Handle city change via dropdown
-      const citySelect = document.getElementById("citySelect");
-      citySelect.addEventListener("change", (event) => {
-        const cityName = event.target.value;
-        updateWeather(cityName);
+        // Handle city change via dropdown
+        const citySelect = document.getElementById("citySelect");
+        citySelect.addEventListener("change", (event) => {
+          const cityName = event.target.value;
+          updateWeather(cityName);
+        });
+
+        function updateWeather(cityName) {
+          const cityData = weatherData[cityName + "_daily"];
+          time.innerHTML = CityData.daily.time[0];
+          weatherCode.innerHTML = cityData.daily.weather_code[0];
+          tempMax.innerHTML = cityData.daily.temperature_2m_max[0] + "°C";
+          tempMin.innerHTML = cityData.daily.temperature_2m_min[0] + "°C";
+          windSpeed.innerHTML = cityData.daily.wind_speed_10m_max[0] + " km/h";
+          cityName.innerHTML = `${
+            cityName.charAt(0).toUpperCase() + cityName.slice(1)
+          }`;
+        }
       });
+    </script>
+  </head>
 
-      function updateWeather(cityName) {
-        const cityData = weatherData[cityName + "_daily"];
-        time.innerHTML = CityData.daily.time[0];
-        weatherCode.innerHTML = cityData.daily.weather_code[0];
-        tempMax.innerHTML = cityData.daily.temperature_2m_max[0] + "°C";
-        tempMin.innerHTML = cityData.daily.temperature_2m_min[0] + "°C";
-        windSpeed.innerHTML = cityData.daily.wind_speed_10m_max[0] + " km/h";
-        cityName.innerHTML = `${cityName.charAt(0).toUpperCase() + cityName.slice(1)}`;
-    }
-  });
+  <!--END NAV-->
+  <body>
+    <!-- Navbar with City Dropdown -->
+    <nav class="navbar has-background-white">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <!-- You can add a logo or text here -->
+        </a>
+      </div>
 
-  </script>
-</head>
-
-<!--END NAV-->
-<body>
-   <!-- Navbar with City Dropdown -->
-  <nav class="navbar has-background-white">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <!-- You can add a logo or text here -->
-      </a>
-    </div>
-
-    <div id="navbarMenu" class="navbar-menu is-flex is-justify-content-center">
-      <div class="navbar-item">
-        <a class="navbar-item has-text-grey has-text-centered is-size-4" href="index.html">Home</a>
-        <a class="navbar-item has-text-grey has-text-centered is-size-4" href="dashboard.html">Dashboard</a>
-        <a class="navbar-item has-text-grey has-text-centered is-size-4" href="settings.html">Settings</a>
-
-        <!-- City Dropdown -->
+      <div
+        id="navbarMenu"
+        class="navbar-menu is-flex is-justify-content-center"
+      >
         <div class="navbar-item">
-          <div class="select is-small">
-            <select id="citySelect">
-              <option value="berlin">Berlin</option>
-              <option value="new_york">Amsterdam</option>
-              <option value="tokyo">Paris</option>
-              <option value="paris">Tromso</option>
-              <option value="tokyo">Cork</option>
-              <option value="paris">Copenhagen</option>
-            </select>
+          <a
+            class="navbar-item has-text-grey has-text-centered is-size-4"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="navbar-item has-text-grey has-text-centered is-size-4"
+            href="dashboard.html"
+            >Dashboard</a
+          >
+          <a
+            class="navbar-item has-text-grey has-text-centered is-size-4"
+            href="settings.html"
+            >Settings</a
+          >
+
+          <!-- City Dropdown -->
+          <div class="navbar-item">
+            <div class="select is-small">
+              <select id="citySelect">
+                <option value="berlin">Berlin</option>
+                <option value="new_york">Amsterdam</option>
+                <option value="tokyo">Paris</option>
+                <option value="paris">Tromso</option>
+                <option value="tokyo">Cork</option>
+                <option value="paris">Copenhagen</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-<!--Weather info column -->
-  <div class="columns is-multiline box has-background-white">
+    <!--Weather info column -->
+    <div class="columns is-multiline box has-background-white">
+      <!-- Card 1 -->
+      <div class="column is-one-third">
+        <figure class="image is-100x100">
+          <img src="../assets/img/logo.png" alt="Logo" />
+        </figure>
+      </div>
 
-    <!-- Card 1 -->
-    <div class="column is-one-third">
-      <figure class="image is-100x100">
-        <img src="images/logo.png" alt="Logo">
-      </figure>
+      <!-- Card 2 -->
+      <div class="column is-one-third">
+        <h1
+          class="title has-text-weight-bold is-size-1 has-text-centered"
+          style="margin-top: 70px"
+        >
+          Berlin
+        </h1>
+        <p
+          class="subtitle has-text-weight-bold is-size-3 has has-text-centered"
+        >
+          Today
+        </p>
+      </div>
 
-    </div>
+      <!-- Card 3 -->
+      <div class="column is-one-third">
+        <div
+          class="card has-background-black has-text-white has-text-centered"
+          style="height: 90%; width: 100%"
+        >
+          <div class="card-content">
+            <h1 class="is-size-4 has-text-white has-text-centreted mb-6">
+              Right Now
+            </h1>
 
-    <!-- Card 2 -->
-    <div class="column is-one-third">
-      <h1 class ="title has-text-weight-bold is-size-1 has-text-centered" style="margin-top: 70px;">Berlin</h1> 
-      <p class="subtitle has-text-weight-bold is-size-3 has has-text-centered">Today</p>
-    </div>
-
-    <!-- Card 3 -->
-  <div class="column is-one-third">
-    <div class="card has-background-black has-text-white has-text-centered" style="height: 90%; width: 100%;">
-      <div class="card-content">
-        <h1 class="is-size-4 has-text-white has-text-centreted mb-6">Right Now</h1>
-    
-        <div class="is-flex is-justify-content-space-between">
-      <p class="subtitle is-size-5 has-text-white">11°C</p>
-      <p class="subtitle is-size-5 has-text-white">10 km/h</p>
-    </div>
-  </div>
-</div>
-</div>
-
-    <!-- Card 4 -->
-    <div class="column is-one-third" >
-      <figure class="image has-text-centered image is-64x64"style="height: 80%; width: 100%;">
-        <img src="images/sun.png" alt="Sun Icon">
-      </figure>
-    </div>
-
- <!-- Card 5 -->
-    <div class="column is-3 has-text-white has-text-centered">
-      <div class="card has-background-black" style="height: 50%; width: 100%;margin-top: 150px;">
-        <div class="card-content">
-          <h1 class="is-size-4 has-text-white mb-6">Max Temp</h1>
-          <p class="is-size-4 has-text-white">12°C</p>
+            <div class="is-flex is-justify-content-space-between">
+              <p class="subtitle is-size-5 has-text-white">11°C</p>
+              <p class="subtitle is-size-5 has-text-white">10 km/h</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 6 -->
-    <div class="column is-3 has-text-white has-text-centered">
-      <div class="card has-background-black" style="height: 50%; width: 100%; margin-top: 150px;">
-        <div class="card-content">
-          <h1 class="is-size-4 has-text-white mb-6">Max Wind</h1>
-          <p class="is-size-4 has-text-white has-text-centered">15 km/h</p>
+      <!-- Card 4 -->
+      <div class="column is-one-third">
+        <figure
+          class="image has-text-centered image is-64x64"
+          style="height: 80%; width: 100%"
+        >
+          <img src="images/sun.png" alt="Sun Icon" />
+        </figure>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="column is-3 has-text-white has-text-centered">
+        <div
+          class="card has-background-black"
+          style="height: 50%; width: 100%; margin-top: 150px"
+        >
+          <div class="card-content">
+            <h1 class="is-size-4 has-text-white mb-6">Max Temp</h1>
+            <p class="is-size-4 has-text-white">12°C</p>
+          </div>
         </div>
       </div>
-    </div> 
 
-    <div class="column is-2"></div>
-
-
-    <!-- Card 7 -->
-    <div class="column is-2">
-      <section class="card has-background-black has-text-white">
-
-        <header class="card-header">
-          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
-            Today
-          </p>
-        </header>
-
-        <div class="card-image has-text-centered">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="images/sun.png" alt="Sun Icon">
-          </figure>
+      <!-- Card 6 -->
+      <div class="column is-3 has-text-white has-text-centered">
+        <div
+          class="card has-background-black"
+          style="height: 50%; width: 100%; margin-top: 150px"
+        >
+          <div class="card-content">
+            <h1 class="is-size-4 has-text-white mb-6">Max Wind</h1>
+            <p class="is-size-4 has-text-white has-text-centered">15 km/h</p>
+          </div>
         </div>
+      </div>
 
-        <footer class="card-footer" style="border-top: none;">
-          <p class="card-footer-item has-text-left" style="border: none;">
-            <span class="is-size-5 has-text-white">12°C</span>
-          </p>
-          <p class="card-footer-item has-text-right" style="border: none;">
-            <span class="is-size-5 has-text-white">13°C</span>
-          </p>
-        </footer>
-      </section>
-    </div>  
+      <div class="column is-2"></div>
 
+      <!-- Card 7 -->
+      <div class="column is-2">
+        <section class="card has-background-black has-text-white">
+          <header class="card-header">
+            <p
+              class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
+            >
+              Today
+            </p>
+          </header>
 
-    <!-- Card 8 -->
-    <div class="column is-2">
-      <section class="card has-background-black has-text-white">
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/sun.png" alt="Sun Icon" />
+            </figure>
+          </div>
 
-        <header class="card-header">
-          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
-            Mon
-          </p>
-        </header>
+          <footer class="card-footer" style="border-top: none">
+            <p class="card-footer-item has-text-left" style="border: none">
+              <span class="is-size-5 has-text-white">12°C</span>
+            </p>
+            <p class="card-footer-item has-text-right" style="border: none">
+              <span class="is-size-5 has-text-white">13°C</span>
+            </p>
+          </footer>
+        </section>
+      </div>
 
-        <div class="card-image has-text-centered">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="images/sun.png" alt="Sun Icon">
-          </figure>
-        </div>
+      <!-- Card 8 -->
+      <div class="column is-2">
+        <section class="card has-background-black has-text-white">
+          <header class="card-header">
+            <p
+              class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
+            >
+              Mon
+            </p>
+          </header>
 
-        <footer class="card-footer" style="border-top: none;">
-          <p class="card-footer-item has-text-left" style="border: none;">
-            <span class="is-size-5 has-text-white">12°C</span>
-          </p>
-          <p class="card-footer-item has-text-right" style="border: none;">
-            <span class="is-size-5 has-text-white">13°C</span>
-          </p>
-        </footer>
-      </section>
-    </div>  
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/sun.png" alt="Sun Icon" />
+            </figure>
+          </div>
 
-    <!-- Card 9 -->
-    <div class="column is-2">
-      <section class="card has-background-black has-text-white">
+          <footer class="card-footer" style="border-top: none">
+            <p class="card-footer-item has-text-left" style="border: none">
+              <span class="is-size-5 has-text-white">12°C</span>
+            </p>
+            <p class="card-footer-item has-text-right" style="border: none">
+              <span class="is-size-5 has-text-white">13°C</span>
+            </p>
+          </footer>
+        </section>
+      </div>
 
-        <header class="card-header">
-          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
-            Tue
-          </p>
-        </header>
+      <!-- Card 9 -->
+      <div class="column is-2">
+        <section class="card has-background-black has-text-white">
+          <header class="card-header">
+            <p
+              class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
+            >
+              Tue
+            </p>
+          </header>
 
-        <div class="card-image has-text-centered">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="images/sun.png" alt="Sun Icon">
-          </figure>
-        </div>
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/sun.png" alt="Sun Icon" />
+            </figure>
+          </div>
 
-        <footer class="card-footer" style="border-top: none;">
-          <p class="card-footer-item has-text-left" style="border: none;">
-            <span class="is-size-5 has-text-white">12°C</span>
-          </p>
-          <p class="card-footer-item has-text-right" style="border: none;">
-            <span class="is-size-5 has-text-white">13°C</span>
-          </p>
-        </footer>
-      </section>
-    </div>  
+          <footer class="card-footer" style="border-top: none">
+            <p class="card-footer-item has-text-left" style="border: none">
+              <span class="is-size-5 has-text-white">12°C</span>
+            </p>
+            <p class="card-footer-item has-text-right" style="border: none">
+              <span class="is-size-5 has-text-white">13°C</span>
+            </p>
+          </footer>
+        </section>
+      </div>
 
-    <div class="column is-2">
-      <section class="card has-background-black has-text-white">
+      <div class="column is-2">
+        <section class="card has-background-black has-text-white">
+          <header class="card-header">
+            <p
+              class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
+            >
+              Wed
+            </p>
+          </header>
 
-        <header class="card-header">
-          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
-            Wed
-          </p>
-        </header>
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/sun.png" alt="Sun Icon" />
+            </figure>
+          </div>
 
-        <div class="card-image has-text-centered">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="images/sun.png" alt="Sun Icon">
-          </figure>
-        </div>
+          <footer class="card-footer" style="border-top: none">
+            <p class="card-footer-item has-text-left" style="border: none">
+              <span class="is-size-5 has-text-white">12°C</span>
+            </p>
+            <p class="card-footer-item has-text-right" style="border: none">
+              <span class="is-size-5 has-text-white">13°C</span>
+            </p>
+          </footer>
+        </section>
+      </div>
 
-        <footer class="card-footer" style="border-top: none;">
-          <p class="card-footer-item has-text-left" style="border: none;">
-            <span class="is-size-5 has-text-white">12°C</span>
-          </p>
-          <p class="card-footer-item has-text-right" style="border: none;">
-            <span class="is-size-5 has-text-white">13°C</span>
-          </p>
-        </footer>
-      </section>
-    </div>  
+      <div class="column is-2">
+        <section class="card has-background-black has-text-white">
+          <header class="card-header">
+            <p
+              class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
+            >
+              Thur
+            </p>
+          </header>
 
-    <div class="column is-2">
-      <section class="card has-background-black has-text-white">
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/sun.png" alt="Sun Icon" />
+            </figure>
+          </div>
 
-        <header class="card-header">
-          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
-            Thur
-          </p>
-        </header>
+          <footer class="card-footer" style="border-top: none">
+            <p class="card-footer-item has-text-left" style="border: none">
+              <span class="is-size-5 has-text-white">12°C</span>
+            </p>
+            <p class="card-footer-item has-text-right" style="border: none">
+              <span class="is-size-5 has-text-white">13°C</span>
+            </p>
+          </footer>
+        </section>
+      </div>
 
-        <div class="card-image has-text-centered">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="images/sun.png" alt="Sun Icon">
-          </figure>
-        </div>
+      <div class="column is-2">
+        <section class="card has-background-black has-text-white">
+          <header class="card-header">
+            <p
+              class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
+            >
+              Fri
+            </p>
+          </header>
 
-        <footer class="card-footer" style="border-top: none;">
-          <p class="card-footer-item has-text-left" style="border: none;">
-            <span class="is-size-5 has-text-white">12°C</span>
-          </p>
-          <p class="card-footer-item has-text-right" style="border: none;">
-            <span class="is-size-5 has-text-white">13°C</span>
-          </p>
-        </footer>
-      </section>
-    </div>  
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/sun.png" alt="Sun Icon" />
+            </figure>
+          </div>
 
-    <div class="column is-2">
-      <section class="card has-background-black has-text-white">
-
-        <header class="card-header">
-          <p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
-            Fri
-          </p>
-        </header>
-
-        <div class="card-image has-text-centered">
-          <figure class="image is-128x128 is-inline-block">
-            <img src="images/sun.png" alt="Sun Icon">
-          </figure>
-        </div>
-
-         <footer class="card-footer" style="border-top: none;">
-          <p class="card-footer-item has-text-left" style="border: none;">
-            <span class="is-size-5 has-text-white">12°C</span>
-          </p>
-          <p class="card-footer-item has-text-right" style="border: none;">
-            <span class="is-size-5 has-text-white">13°C</span>
-          </p>
-        </footer>
-      </section>
-    </div>  
-
-  </div>
-
-</body>
+          <footer class="card-footer" style="border-top: none">
+            <p class="card-footer-item has-text-left" style="border: none">
+              <span class="is-size-5 has-text-white">12°C</span>
+            </p>
+            <p class="card-footer-item has-text-right" style="border: none">
+              <span class="is-size-5 has-text-white">13°C</span>
+            </p>
+          </footer>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
-
