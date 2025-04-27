@@ -14,7 +14,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
         // Display Berlin weather data by default
-      updateWeather("berlin");
+      updateWeather("cork");
 
         // Handle city change via dropdown
       const citySelect = document.getElementById("citySelect");
@@ -28,7 +28,7 @@
           // Set items from weather data
         const cityData = processWeatherData(weatherData);
 
-        const currentCity = cityName || "berlin";
+        const currentCity = cityName || "cork";
         const currentDay = getCurrentDay();
 
         const currentCityData = cityData[currentCity][currentDay];
@@ -72,7 +72,7 @@
 
           <div class="card-image has-text-centered">
           <figure class="image is-128x128 is-inline-block">
-          <img src="images/sun.png" alt="Sun Icon" />
+          <img src="/images/sun.png" alt="Sun Icon" />
           </figure>
           </div>
 
@@ -123,8 +123,8 @@
   <header class="columns">
     <!-- Card 1 -->
     <div class="column">
-      <figure class="image is-100x100">
-        <img src="images/logo.png" alt="Logo" />
+      <figure class="/image is-100x100">
+        <img src="/images/logo.png" alt="Logo" />
       </figure>
     </div>
     <!-- Card 2 -->
@@ -168,7 +168,7 @@
     class="image has-text-centered image is-64x64"
     style="height: 80%; width: 100%"
     >
-    <img src="images/sun.png" alt="Sun Icon" />
+    <img src="/images/sun.png" alt="Sun Icon" />
   </figure>
 </div>
 

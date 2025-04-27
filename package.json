@@ -1,19 +1,25 @@
 {
-  "name": "weather_app",
+  "name": "assessment_2",
   "version": "1.0.0",
   "description": "A web client for our music streaming service.",
-  "main": "eleventy.js",
+  "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marina19761107/weather_app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy-navigation": "^0.3.5"
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Marina19761107/weather_app/issues"
   },
+  "homepage": "https://github.com/Marina19761107/weather_app#readme",
   "dependencies": {
-    "dependency-graph": "^0.11.0",
-    "nunjucks-to-html": "^1.1.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^1.0.4"
   }
 }

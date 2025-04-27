@@ -36,7 +36,9 @@ function processWeatherData(weatherData) {
         maxTemp: cityData.temperature_2m_max[index],
         minTemp: cityData.temperature_2m_min[index],
         weatherCode: cityData.weather_code[index],
-        windSpeed: cityData.wind_speed_10m_max[index],
+        currentWindSpeed: cityData.wind_speed_10m_max[index],
+        maxWindSpeed: cityData.wind_gusts_10m_max[index],
+
         rightNowTemp: calculateMedian(
           cityData.temperature_2m_min[index],
           cityData.temperature_2m_max[index]
