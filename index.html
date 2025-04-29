@@ -13,16 +13,20 @@
   <script src="/js/processWeatherData.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      let cityName = "berlin";
+      if (window !== undefined) {
+        cityName = new URLSearchParams(window.location.search).get("city");
+      }
         // Display Berlin weather data by default
-      updateWeather("berlin");
+      updateWeather(cityName);
 
         // Handle city change via dropdown
-      const citySelect = document.getElementById("citySelect");
-      citySelect.addEventListener("change", (event) => {
-        const cityName = event.target.value;
-        console.log(cityName);
-        updateWeather(cityName);
-      });
+      // const citySelect = document.getElementById("citySelect");
+      // citySelect.addEventListener("change", (event) => {
+      //   const cityName = event.target.value;
+      //   console.log("Event: ", cityName);
+      //   updateWeather(cityName);
+      // });
 
       function updateWeather(cityName) {
           // Set items from weather data
