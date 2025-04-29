@@ -1,6 +1,6 @@
-# Dotify
+# Weather Aopp
 
-A web client for our music streaming service.
+A web client for our Weather app service.
 
 ## Getting Started
 

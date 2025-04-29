@@ -11,28 +11,17 @@
 
   <script src="/js/components/weather_data.js"></script>
   <script src="/js/processWeatherData.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // Display Berlin weather data by default
       updateWeather("amsterdam");
-
-        // Handle city change via dropdown
-      const citySelect = document.getElementById("citySelect");
-      citySelect.addEventListener("change", (event) => {
-        const cityName = event.target.value;
-        console.log(cityName);
-        updateWeather(cityName);
-      });
-
       function updateWeather(cityName) {
-          // Set items from weather data
-        const cityData = processWeatherData(weatherData);
 
+        <!--set items from weather data-->
+        const cityData = processWeatherData(weatherData);
         const currentCity = cityName || 'amsterdam';
         const currentDay = getCurrentDay();
-
         const currentCityData = cityData[currentCity][currentDay];
-
         const time = document.getElementById("time");
         const rightNowTemp = document.getElementById("rightNowTemp");
         const tempMax = document.getElementById("tempMax");
@@ -45,47 +34,39 @@
         tempMax.innerHTML = currentCityData.maxTemp + "°C";
         currentWindSpeed.innerHTML = currentCityData.currentWindSpeed + " km/h";
         maxWindSpeed.innerHTML = currentCityData.maxWindSpeed + " km/h";
-        city.innerHTML =
-        currentCity.charAt(0).toUpperCase() + currentCity.slice(1);
+        city.innerHTML = currentCity.charAt(0).toUpperCase() + currentCity.slice(1);
 
-        const weeklyWeatherContainer = document.getElementById(
-          "weeklyWeatherContainer"
-          );
+        const weeklyWeatherContainer = document.getElementById("weeklyWeatherContainer");
 
-          // Clear existing content
+        <!--clear existing content-->
         weeklyWeatherContainer.innerHTML = "";
 
-          // Create and append simple boxes for each item
+        <!--create and append simple boxes for each item-->
         Object.keys(cityData[currentCity]).forEach((item) => {
           const dayWeatherBox = document.createElement("div");
           dayWeatherBox.className = "column is-2";
           const dayData = cityData[currentCity][item];
-          dayWeatherBox.innerHTML = `
-          <section class="card has-background-black has-text-white">
-          <div class="card-header">
-          <p
-          class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
-          >
-          ${dayData.time}
-          </p>
-          </div>
 
-          <div class="card-image has-text-centered">
-          <figure class="image is-128x128 is-inline-block">
-          <img src="/images/sun.png" alt="Sun Icon" />
-          </figure>
-          </div>
+          dayWeatherBox.innerHTML = 
+          `<section class="card has-background-black has-text-white">
+<div class="card-header">
+<p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+          ${dayData.time}<p>
+</div>
 
-          <div class="card-footer" style="border-top: none">
-          <p class="card-footer-item has-text-left" style="border: none">
-          <span class="is-size-5 has-text-white">${dayData.maxTemp}°C</span>
-          </p>
-          <p class="card-footer-item has-text-right" style="border: none">
-          <span class="is-size-5 has-text-white">${dayData.minTemp}°C</span>
-          </p>
-          </div>
-          </section>
-          `;
+<div class="card-image has-text-centered">
+<figure class="image is-128x128 is-inline-block">
+<img src="/images/sun.png" alt="Sun Icon" />
+</figure>
+</div>
+
+<div class="card-footer" style="border-top: none">
+<p class="card-footer-item has-text-left" style="border: none">
+<span class="is-size-5 has-text-white">${dayData.maxTemp}°C</span></p>
+<p class="card-footer-item has-text-right" style="border: none">
+<span class="is-size-5 has-text-white">${dayData.minTemp}°C</span></p>
+</div>
+          </section>`;
 
           weeklyWeatherContainer.appendChild(dayWeatherBox);
         });
@@ -94,13 +75,10 @@
   </script>
 </head>
 
-<!--END NAV-->
 <body>
  <nav class="navbar has-background-white">
     <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <!-- You can add a logo or text here -->
-      </a>
+      <a class="navbar-item" href="#"></a>
     </div>
 
     <div
@@ -112,53 +90,53 @@
       <a
       class="navbar-item has-text-grey has-text-centered is-size-4"
       href="/dashboard/"
-      >Dashboard</a
-      >
+      >Dashboard</a>
     </div>
   </nav>
+
 <!--Weather info column -->
 <div class="container">
+  
   <header class="columns">
+
     <!-- Card 1 -->
     <div class="column">
       <figure class="image is-100x100">
         <img src="/images/logo.png" alt="Logo" />
       </figure>
     </div>
+
     <!-- Card 2 -->
     <div class="column">
       <h1
       class="title has-text-weight-bold is-size-1 has-text-centered"
       style="margin-top: 70px"
-      id="cityName"
-      ></h1>
+      id="cityName"></h1>
       <p
       class="subtitle has-text-weight-bold is-size-3 has has-text-centered"
-      id="time"
-      ></p>
+      id="time"></p>
     </div>
+
     <!-- Card 3 -->
     <div class="column">
-      <div
-      class="card has-background-black has-text-white has-text-centered"
-      style="height: 90%; width: 100%"
-      >
+      <div class="card has-background-black has-text-white has-text-centered"
+      style="height: 90%; width: 100%">
       <div class="card-content">
         <h1 class="is-size-4 has-text-white has-text-centreted mb-6">
           Right Now
         </h1>
 
         <div class="is-flex is-justify-content-space-between">
-          <p
-          class="subtitle is-size-5 has-text-white"
-          id="rightNowTemp"
-          ></p>
+          <p class="subtitle is-size-5 has-text-white"
+          id="rightNowTemp"></p>
+
           <p class="subtitle is-size-5 has-text-white"id ="currentWindSpeed"></p>
         </div>
       </div>
     </div>
   </div>
 </header>
+
 <div class="columns">
   <!-- Card 4 -->
   <div class="column">
