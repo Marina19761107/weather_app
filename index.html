@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>(Wheather)Weather</title>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
 
   <script src="/js/components/weather_data.js"></script>
+
   <script src="/js/processWeatherData.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -28,8 +27,10 @@
       //   updateWeather(cityName);
       // });
 
+
+    document.addEventListener("DOMContentLoaded", () => {updateWeather("berlin");
       function updateWeather(cityName) {
-          // Set items from weather data
+        // <|-- set items from weather data-->
         const cityData = processWeatherData(weatherData);
 
         const currentCity = cityName || "berlin";
@@ -52,43 +53,36 @@
         city.innerHTML =
         currentCity.charAt(0).toUpperCase() + currentCity.slice(1);
 
-        const weeklyWeatherContainer = document.getElementById(
-          "weeklyWeatherContainer"
-          );
+        const weeklyWeatherContainer = document.getElementById("weeklyWeatherContainer");
 
-          // Clear existing content
+        <!--clear existing content-->
         weeklyWeatherContainer.innerHTML = "";
 
-          // Create and append simple boxes for each item
+        <!--create and append simple boxes for each item-->
         Object.keys(cityData[currentCity]).forEach((item) => {
           const dayWeatherBox = document.createElement("div");
           dayWeatherBox.className = "column is-2";
           const dayData = cityData[currentCity][item];
           dayWeatherBox.innerHTML = `
-          <section class="card has-background-black has-text-white">
-          <div class="card-header">
-          <p
-          class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white"
-          >
-          ${dayData.time}
-          </p>
-          </div>
+<section class="card has-background-black has-text-white">
+<div class="card-header">
+<p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+            ${dayData.time} </p>
+</div>
 
-          <div class="card-image has-text-centered">
-          <figure class="image is-128x128 is-inline-block">
-          <img src="images/sun.png" alt="Sun Icon" />
-          </figure>
-          </div>
+<div class="card-image has-text-centered">
+<figure class="image is-128x128 is-inline-block">
+<img src="images/sun.png" alt="Sun Icon" />
+</figure>
+</div>
 
-          <div class="card-footer" style="border-top: none">
-          <p class="card-footer-item has-text-left" style="border: none">
-          <span class="is-size-5 has-text-white">${dayData.maxTemp}°C</span>
-          </p>
-          <p class="card-footer-item has-text-right" style="border: none">
-          <span class="is-size-5 has-text-white">${dayData.minTemp}°C</span>
-          </p>
-          </div>
-          </section>
+<div class="card-footer" style="border-top: none">
+<p class="card-footer-item has-text-left" style="border: none">
+<span class="is-size-5 has-text-white">${dayData.maxTemp}°C</span></p>
+<p class="card-footer-item has-text-right" style="border: none">
+<span class="is-size-5 has-text-white">${dayData.minTemp}°C</span></p>
+</div>
+</section>
           `;
 
           weeklyWeatherContainer.appendChild(dayWeatherBox);
@@ -98,8 +92,9 @@
   </script>
 </head>
 
-<!--END NAV-->
 <body>
+
+  <!--navigation bar-->
   <nav class="navbar has-background-white">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
@@ -121,8 +116,8 @@
     </div>
   </nav>
 
-
-<!--Weather info column -->
+<!--column started-->
+<!--card 1-->
 <div class="container">
   <header class="columns">
     <!-- Card 1 -->
@@ -131,6 +126,7 @@
         <img src="images/logo.png" alt="Logo" />
       </figure>
     </div>
+
     <!-- Card 2 -->
     <div class="column">
       <h1
@@ -138,50 +134,42 @@
       style="margin-top: 70px"
       id="cityName"
       ></h1>
-      <p
-      class="subtitle has-text-weight-bold is-size-3 has has-text-centered"
-      id="time"
-      ></p>
+      <p class="subtitle has-text-weight-bold is-size-3 has has-text-centered"
+      id="time"></p>
     </div>
+
     <!-- Card 3 -->
     <div class="column">
-      <div
-      class="card has-background-black has-text-white has-text-centered"
-      style="height: 90%; width: 100%"
-      >
+      <div class="card has-background-black has-text-white has-text-centered"
+      style="height: 90%; width: 100%">
       <div class="card-content">
         <h1 class="is-size-4 has-text-white has-text-centreted mb-6">
           Right Now
         </h1>
 
         <div class="is-flex is-justify-content-space-between">
-          <p
-          class="subtitle is-size-5 has-text-white"
-          id="rightNowTemp"
-          ></p>
+          <p class="subtitle is-size-5 has-text-white" id="rightNowTemp"></p>
           <p class="subtitle is-size-5 has-text-white"id ="currentWindSpeed"></p>
         </div>
       </div>
     </div>
   </div>
 </header>
+
 <div class="columns">
+
   <!-- Card 4 -->
   <div class="column">
-    <figure
-    class="image has-text-centered image is-64x64"
-    style="height: 80%; width: 100%"
-    >
-    <img src="images/sun.png" alt="Sun Icon" />
+    <figure class="image has-text-centered image is-64x64"
+    style="height: 80%; width: 100%">
+    <img src="/images/sun.png" alt="Sun Icon">
   </figure>
 </div>
 
 <!-- Card 5 -->
 <div class="column has-text-white has-text-centered">
-  <div
-  class="card has-background-black"
-  style="height: 50%; width: 100%; margin-top: 150px"
-  >
+  <div class="card has-background-black"
+  style="height: 50%; width: 100%; margin-top: 150px">
   <div class="card-content">
     <h1 class="is-size-4 has-text-white mb-6">Max Temp</h1>
     <p class="is-size-4 has-text-white" id="tempMax"></p>
@@ -191,27 +179,23 @@
 
 <!-- Card 6 -->
 <div class="column has-text-white has-text-centered">
-  <div
-  class="card has-background-black"
-  style="height: 50%; width: 100%; margin-top: 150px"
-  >
+  <div class="card has-background-black"
+  style="height: 50%; width: 100%; margin-top: 150px">
   <div class="card-content">
     <h1 class="is-size-4 has-text-white mb-6">Wind Gust</h1>
-    <p
-    class="is-size-4 has-text-white has-text-centered"
-    id="maxWindSpeed"
-    ></p>
+    <p class="is-size-4 has-text-white has-text-centered"
+    id="maxWindSpeed"></p>
   </div>
 </div>
 </div>
 </div>
+
 <footer
 class="columns"
 id="weeklyWeatherContainer"
-style="overflow-x: scroll"
->
-<!-- Simple boxes will be dynamically inserted here -->
+style="overflow-x: scroll">
 </footer>
+
 </div>
 </body>
 </html>
