@@ -3,5 +3,27 @@
     <div class="navbar-item">
       <a class="navbar-item has-text-grey has-text-centered is-size-4" href="/">Dashboard</a>
     </div>
+    <div class="navbar-item">
+      <div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span> Select a city </span>
+         <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <a href="/city/?city=berlin" class="dropdown-item"> Berlin </a>
+      <a href="/city/?city=amsterdam" class="dropdown-item"> Amsterdam </a>
+      <a href="/city/?city=paris" class="dropdown-item"> Paris </a>
+      <a href="/city/?city=tromso" class="dropdown-item"> Tromso </a>
+      <a href="/city/?city=cork" class="dropdown-item"> Cork </a>
+      <a href="/city/?city=copenhagen" class="dropdown-item"> Copenhagen </a>
+    </div>
+  </div>
+</div>
+    </div>
   </div>
 </nav>
