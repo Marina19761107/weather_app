@@ -43,10 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
      // Conditional expression to update the "right temperature"
     // If live temperature data exists, update with the live temperature
-      rightNowTemp.innerHTML = liveRightNowTemp !== null
-      ? `${liveRightNowTemp}°C`
-    // If no live temperature data is found, fallback to the default temperature
-      : `${currentCityData.rightNowTemp}°C`;
+      rightNowTemp.innerHTML =  `${liveRightNowTemp}°C`
+    
     //updating temperature and wind speed on the page
       tempMax.innerHTML = currentCityData.maxTemp + "°C";
       currentWindSpeed.innerHTML = currentCityData.currentWindSpeed + " km/h";

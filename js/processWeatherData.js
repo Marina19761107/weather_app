@@ -43,10 +43,6 @@ function processWeatherData(weatherData) {
         minTemp: cityData.temperature_2m_min[index],
         currentWindSpeed: cityData.wind_speed_10m_max[index],
         maxWindSpeed: cityData.wind_gusts_10m_max[index],
-
-// Default "right now" temperature, used if hourly temperature is not found.
-// It estimates the current temperature as the average (mean) of the min and max temperatures.
-        rightNowTemp: (cityData.temperature_2m_min[index] + cityData.temperature_2m_max[index]) / 2
       };
     });
   });
@@ -57,7 +53,9 @@ function processWeatherData(weatherData) {
 function getCurrentDay() {
   const today = new Date();
   // get the current day index
+
   const currentDayIndex = today.getDay();
+  console.log(currentDayIndex)
   //convert the day name to lowercase and return 
   return weekDays[currentDayIndex].toLowerCase();
 }
