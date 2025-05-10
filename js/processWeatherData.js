@@ -1,3 +1,4 @@
+// Array containing the names of the days of the week, starting from Sunday
 const weekDays = [
   "Sunday",
   "Monday",
@@ -7,75 +8,58 @@ const weekDays = [
   "Friday",
   "Saturday",
 ];
-
+//this function processes and updates the weather for each city daily,
+//extracting relevant details from the provided data array.
 function processWeatherData(weatherData) {
   const today = new Date();
-  // getDay() returns the day of the week (from 0 to 6) of a date.
+  // get the current day index(from 0 to 6) 
   const currentDayIndex = today.getDay();
 
   const processedData = {};
 
-  // Get all city keys that end with _daily
+  // filter keys that end with "_daily" to identify cities with daily forecast data
   const cityKeys = Object.keys(weatherData)?.filter((key) =>
     key.endsWith("_daily")
-  );
-
+    );
+//loop through each city and process the weather data
   cityKeys.forEach((cityKey) => {
+    //remove "_daily" to get the actual city name
     const cityName = cityKey.replace("_daily", "");
+    //accessing the actual weather data
     const cityData = weatherData[cityKey].daily;
-
+//store weather information for current city
     processedData[cityName] = {};
 
+//looping through the daily forecast data
     cityData.time.forEach((_, index) => {
-      // Calculate the day index, wrapping around if needed
+      // Calculate the current day of the week, starting from today
       const dayIndex = (currentDayIndex + index) % 7;
       const dayName = weekDays[dayIndex];
 
+//store the extracted and calculated weather information by day
       processedData[cityName][dayName.toLowerCase()] = {
         time: dayName,
         maxTemp: cityData.temperature_2m_max[index],
         minTemp: cityData.temperature_2m_min[index],
-        weatherCode: cityData.weather_code[index],
         currentWindSpeed: cityData.wind_speed_10m_max[index],
         maxWindSpeed: cityData.wind_gusts_10m_max[index],
 
-        rightNowTemp: calculateMedian(
-          cityData.temperature_2m_min[index],
-          cityData.temperature_2m_max[index]
-        ),
+// Default "right now" temperature, used if hourly temperature is not found.
+// It estimates the current temperature as the average (mean) of the min and max temperatures.
+        rightNowTemp: (cityData.temperature_2m_min[index] + cityData.temperature_2m_max[index]) / 2
       };
     });
   });
-
+//return the structured weather data for all cities
   return processedData;
 }
-
+//This function returns the current day of the week 
 function getCurrentDay() {
   const today = new Date();
-  // getDay() returns the day of the week (from 0 to 6) of a date.
+  // get the current day index
   const currentDayIndex = today.getDay();
+  //convert the day name to lowercase and return 
   return weekDays[currentDayIndex].toLowerCase();
 }
 
-function calculateMedian(min, max) {
-  const arr = generateArray(min, max);
-  const length = arr.length;
-  const middle = Math.floor(length / 2);
-  // Check if the array length is even or odd
-  if (length % 2 === 0) {
-    // If even, return the average of middle two elements
-    return (arr[middle - 1] + arr[middle]) / 2;
-  } else {
-    // If odd, return the middle element
-    return arr[middle];
-  }
-}
 
-function generateArray(min, max) {
-  let array = [];
-  for (let i = min; i <= max; i++) {
-    array.push(i);
-  }
-
-  return array;
-}
