@@ -1,0 +1,53 @@
+---
+layout: layout.njk
+title: (Weather)Weather
+script: /js/pages/index.js
+---
+<section class="section">
+<div class="container">
+<div class="columns is-vcentered">
+<div class="column is-2 has-text-left">
+<figure class="image is-150x150">
+<img src="/images/logo.png" alt="Logo" />
+</figure>
+</div>
+
+<div class="column is-10 has-text-centered has-text-black">
+<p class="is-size-1" id="dashboardTitle"><strong>Dashboard</strong></p>
+<p class="is-size-4" id="todayTitle"><strong>Today</strong></p>
+</div>
+</div>
+</div>
+
+<div class="columns is-multiline">
+{% set cities = ["berlin", "amsterdam", "paris", "tromso", "cork", "copenhagen"] %}
+{% for city in cities %}
+<div class="column is-4">
+<a href="/city/?city={{ city }}">
+<section class="card has-background-black has-text-white">
+<header class="card-header">
+<p class="card-header-title is-size-3 is-flex is-justify-content-center has-text-white">
+{{ city | capitalize }}
+</p>
+</header>
+
+<div class="card-image has-text-centered">
+<figure class="image is-128x128 is-inline-block">
+<img src="/images/sun.png" alt="Sun Icon" />
+</figure>
+</div>
+
+<footer class="card-footer" style="border-top: none;">
+<p class="card-footer-item has-text-left" style="border: none;">
+<span id="{{ city }}TempMax" class="is-size-5 has-text-white">--</span>
+</p>
+<p class="card-footer-item has-text-left">
+<span id="{{ city }}TempMin" class="is-size-5 has-text-white">--</span>
+</p>
+</footer>
+</section>
+</a>
+</div>
+{% endfor %}
+</div>
+</section>

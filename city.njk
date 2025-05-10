@@ -1,0 +1,100 @@
+---
+layout: layout.njk
+title: City Weather
+script: /js/pages/city.js
+---
+<!--Weather info column -->
+<div class="container">
+  <header class="columns">
+    <!-- Card 1 -->
+    <div class="column">
+      <figure class="image is-100x100">
+        <img src="/images/logo.png" alt="Logo" />
+      </figure>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="column">
+      <h1
+      class="title has-text-weight-bold is-size-1 has-text-centered"
+      style="margin-top: 70px"
+      id="cityName"
+      ></h1>
+      <p
+      class="subtitle has-text-weight-bold is-size-3 has has-text-centered"
+      id="time"
+      ></p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="column">
+      <div
+      class="card has-background-black has-text-white has-text-centered"
+      style="height: 90%; width: 100%"
+      >
+      <div class="card-content">
+        <h1 class="is-size-4 has-text-white has-text-centreted mb-6">
+          Right Now
+        </h1>
+
+        <div class="is-flex is-justify-content-space-between">
+          <p
+          class="subtitle is-size-5 has-text-white"
+          id="rightNowTemp"
+          ></p>
+          <p class="subtitle is-size-5 has-text-white"id ="currentWindSpeed"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="columns">
+  <!-- Card 4 -->
+  <div class="column">
+    <figure
+    class="image has-text-centered image is-64x64"
+    style="height: 80%; width: 100%"
+    >
+    <img src="/images/sun.png" alt="Sun Icon" />
+  </figure>
+</div>
+
+<!-- Card 5 -->
+<div class="column has-text-white has-text-centered">
+  <div
+  class="card has-background-black"
+  style="height: 50%; width: 100%; margin-top: 150px"
+  >
+  <div class="card-content">
+    <h1 class="is-size-4 has-text-white mb-6">Max Temp</h1>
+    <p class="is-size-4 has-text-white" id="tempMax"></p>
+  </div>
+</div>
+</div>
+
+<!-- Card 6 -->
+<div class="column has-text-white has-text-centered">
+  <div
+  class="card has-background-black"
+  style="height: 50%; width: 100%; margin-top: 150px"
+  >
+  <div class="card-content">
+    <h1 class="is-size-4 has-text-white mb-6">Wind Gust</h1>
+    <p
+    class="is-size-4 has-text-white has-text-centered"
+    id="maxWindSpeed"
+    ></p>
+  </div>
+</div>
+</div>
+</div>
+
+<footer
+class="columns"
+id="weeklyWeatherContainer"
+style="overflow-x: scroll"
+>
+</footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>(Weather)Weather</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="/js/components/weather_data.js"></script>
+  <script src="/js/processWeatherData.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  {% if script %}
+  <script src="{{ script }}"></script>
+  {% endif %}
+</head>
+<body>
+ {% include "components/nav.njk" %}
+ <div class="conteiner">
+  {{ content | safe }}
+</div>
+</body>
+</html>
