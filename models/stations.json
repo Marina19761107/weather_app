@@ -1,7 +1,6 @@
 {
   "file": "./models/playlists.json",
   "stations": [
-   
     {
       "title": "Cork",
       "latitude": 51.89797,
@@ -22,6 +21,13 @@
       "longitude": 8.4833,
       "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
       "_id": "63e5e707-5dd2-458c-9a6d-3b13b1d36c24"
+    },
+    {
+      "title": "Tramore",
+      "latitude": 52.16,
+      "longitude": 7.152,
+      "userid": "719dceff-e23e-46e7-89fa-36c5c9ac41ed",
+      "_id": "0eacad40-3aad-4880-a3ef-2eaa6ef30185"
     }
   ]
 }

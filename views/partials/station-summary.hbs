@@ -1,0 +1,45 @@
+<div class="columns is-8 has-text-white has-background-black">
+  <div class="column">
+    <div class="columns">
+      <h4 class="is-size-4 column">{{station.title}}</h4>
+      <img class="column" src="" alt="" />
+    </div>
+    <p>{{station.latitude}}</p>
+    <p>{{station.longitude}}</p>
+  </div>
+  <div class="column">
+    <div class="columns">
+      <h4 class="is-size-4 column">Weather</h4>
+      <img
+        class="column"
+        src="https://openweathermap.org/img/wn/{{stationSummary.weatherIcon}}@2x.png"
+        alt=""
+      />
+    </div>
+    <p>{{stationSummary.code}}</p>
+  </div>
+  <div class="column">
+    <div class="columns">
+      <h4 class="is-size-4 column">Temp</h4>
+      <img class="column" src="" alt="" />
+    </div>
+    <p>{{stationSummary.temp}}</p>
+    <p>{{stationSummary.minTemp}}</p>
+    <p>{{stationSummary.maxTemp}}</p>
+  </div>
+  <div class="column">
+    <div class="columns">
+      <h4 class="is-size-4 column">Wind</h4>
+      <img class="column" src="" alt="" />
+    </div>
+    <p>{{stationSummary.windSpeed}}</p>
+    <p>{{stationSummary.windDirection}}</p>
+  </div>
+  <div class="column">
+    <div class="columns">
+      <h4 class="is-size-4 column">Pressure</h4>
+      <img class="column" src="" alt="" />
+    </div>
+    <p>{{stationSummary.pressure}}</p>
+  </div>
+</div>

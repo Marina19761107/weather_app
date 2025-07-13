@@ -26,4 +26,3 @@ router.get("/about", aboutController.index);
 router.get("/logout", accountsController.logout);
 
 router.get("/weatherTop", weatherTopController.index);
-

@@ -189,7 +189,8 @@
     "ws": "^8.18.3"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:test": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
