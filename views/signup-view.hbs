@@ -1,0 +1,77 @@
+{{> welcome-menu active="signup"}}
+
+<section class="section">
+  <h1 class="title">Sign up</h1>
+
+  <div class="columns is-vcentered">
+    <!-- Weather Icons (Left Side) -->
+    <div class="column is-half">
+      <div class="columns is-multiline is-centered">
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/01d.png" alt="Clear Sky (Day)">
+          <p>Clear Sky</p>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/02d.png" alt="Few Clouds">
+          <p>Few Clouds</p>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/03d.png" alt="Scattered Clouds">
+          <p>Scattered Clouds</p>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/04d.png" alt="Broken Clouds">
+          <p>Broken Clouds</p>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/09d.png" alt="Shower Rain">
+          <p>Shower Rain</p>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/10d.png" alt="Rain">
+          <p>Rain</p>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/11d.png" alt="Thunderstorm">
+          <p>Thunderstorm</p>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/13d.png" alt="Snow">
+          <p>Snow</p>
+        </div>
+        <div class="column is-one-third has-text-centered">
+          <img src="https://openweathermap.org/img/wn/50d.png" alt="Mist">
+          <p>Mist</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign-up Form (Right Side) -->
+    <div class="column is-half">
+      <form action="/register" method="POST">
+        <label class="label">Name</label>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <input class="input" type="text" placeholder="Enter first name" name="firstName">
+            </div>
+            <div class="field">
+              <input class="input" type="text" placeholder="Enter last name" name="lastName">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <input class="input" type="text" placeholder="Enter email" name="email">
+        </div>
+        <div class="field">
+          <label class="label">Password</label>
+          <input class="input" type="password" placeholder="Enter Password" name="password">
+        </div>
+        <div class="field is-grouped">
+          <button class="button is-link">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,159 @@
+{
+  "file": "./models/users.json",
+  "users": [
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1107",
+      "_id": "67045885-48c1-41b1-9dc2-10d2bae8965f"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "5963f496-32bd-4826-930c-0760ecd38148"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "d97eab4f-ecb9-44f4-8471-57e07aae35d0"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1976",
+      "_id": "08adc24f-8005-4470-8a3a-660d44d0d66c"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "110776",
+      "_id": "b626cbb0-7908-4022-9930-d2f6479144ec"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "1158d752-f8c1-471c-8f90-238aa79efcaa"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "cccc58a7-8b70-4584-bd24-4d26efb4286f"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "7729706d-decd-4877-8a34-7350f7803995"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "be5ad8a9-0745-4bb7-99bf-9545fc8e9381"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "d024e013-519c-4965-8abf-9480c122d9d8"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "973aa21b-c6c2-4358-b2cc-1ac75e792e92"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "56fc7cd0-2685-40fc-871e-8cde53d514e1"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "a01e98a5-eee2-4cc7-95b8-1afe65d1fa4a"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "0ceb566e-ba5f-4ece-8fe3-022028ffaea9"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "6d2b18ae-6fbb-49ac-873d-e853e8c441d1"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "2f5a1efd-c868-470e-b419-aa6239d1bb53"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "77f7b55c-e2ea-4160-8a1d-57bfb85ee56a"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "7eea0c1c-5e02-4c91-b16c-19a5bcce20ea"
+    },
+    {
+      "firstName": "Erik",
+      "lastName": "Kisko",
+      "email": "erikx28@gmail.com",
+      "password": "1994",
+      "_id": "719dceff-e23e-46e7-89fa-36c5c9ac41ed"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "8d240c92-f4a8-4ec1-930f-d75c247f4fcf"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "e952532a-d3fa-4a86-8b87-ca0c525d8cdf"
+    },
+    {
+      "firstName": "Erik",
+      "lastName": "Kisko",
+      "email": "erikx28@gmail.com",
+      "password": "4321",
+      "_id": "5dd8d700-0ce4-4f09-a952-f7072ff67376"
+    }
+  ]
+}
