@@ -1,36 +1,38 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
+import { summarizeStationWeather } from "../utils/weather-summary.js";
+import { accountsController } from "./accounts-controller.js";
 
 export const stationlistController = {
   async index(request, response) {
-    const getIcon = (weatherCode) => {
-      if (weatherCode >= 200 && weatherCode <= 232) {
-        return "11d";
-      }
+    const loggedInUser = await accountsController.getLoggedInUser(request);
+    const stationId = request.params.id;
+    const station = await stationStore.getStationById(stationId);
+
+    const stationWithSummary = {
+      ...station,
+      summary: summarizeStationWeather(station),
     };
-    const station = await stationStore.getStationById(request.params.id);
-    const lastReport = station.reports[station.reports.length - 1];
-    const arrayTemp = station.reports.map((x) => Number(x.temp));
-    const minTemp = Math.min(...arrayTemp);
-    const maxTemp = Math.max(...arrayTemp);
-    const weatherIcon = getIcon(lastReport.code);
 
     const viewData = {
-      station,
-      stationSummary: { ...lastReport, minTemp, maxTemp, weatherIcon },
+      title: "Station Details",
+      station: stationWithSummary,
+      loggedInUser,
     };
 
     response.render("station-view", viewData);
   },
 
   async addReport(request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
     const station = await stationStore.getStationById(request.params.id);
     const newReport = {
-      code: request.body.code,
-      temp: request.body.temp,
-      windSpeed: request.body.windSpeed,
-      pressure: request.body.pressure,
+      code: Number(request.body.code),
+      temp: Number(request.body.temp),
+      windSpeed: Number(request.body.windSpeed),
+      pressure: Number(request.body.pressure),
       windDirection: request.body.windDirection,
+      userid: loggedInUser._id,
     };
 
     console.log(`adding report ${newReport.title}`);

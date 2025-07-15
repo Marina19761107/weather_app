@@ -23,21 +23,30 @@ export const stationStore = {
 
   async getStationById(id) {
     await db.read();
-     const list = db.data.stations.find((station) => station._id === id);
+    const list = db.data.stations.find((station) => station._id === id);
     if (list) {
       list.reports = await reportStore.getReportsByStationId(list._id);
     }
     return list;
   },
 
-async getStationsByUserId(userid) {
+  async getStationsByUserId(userid) {
     await db.read();
-    return db.data.stations.filter((station) => station.userid === userid);
+    const userStations = db.data.stations.filter(
+      (station) => station.userid === userid
+    );
+
+    // Load reports for each station
+    for (const station of userStations) {
+      station.reports = await reportStore.getReportsByStationId(station._id);
+    }
+
+    return userStations;
   },
 
   async deleteStationById(id) {
     await db.read();
-    const index = db.data.stations.findIndex(station => station._id === id);
+    const index = db.data.stations.findIndex((station) => station._id === id);
     if (index !== -1) {
       db.data.stations.splice(index, 1);
       await db.write();

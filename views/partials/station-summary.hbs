@@ -1,45 +1,56 @@
-<div class="columns is-8 has-text-white has-background-black">
-  <div class="column">
-    <div class="columns">
-      <h4 class="is-size-4 column">{{station.title}}</h4>
-      <img class="column" src="" alt="" />
+<div class="box has-background-dark has-text-white">
+  <div class="columns is-vcentered is-multiline">
+
+    <div class="column is-2">
+      <h4 class="title is-5" style="color: white">{{station.title}}</h4>
+      <p>Lat: {{station.latitude}}</p>
+      <p>Long: {{station.longitude}}</p>
+      <a
+        href="/station/{{station._id}}"
+        class="button is-small is-info mt-2"
+      >View</a>
     </div>
-    <p>{{station.latitude}}</p>
-    <p>{{station.longitude}}</p>
-  </div>
-  <div class="column">
-    <div class="columns">
-      <h4 class="is-size-4 column">Weather</h4>
-      <img
-        class="column"
-        src="https://openweathermap.org/img/wn/{{stationSummary.weatherIcon}}@2x.png"
-        alt=""
-      />
+
+    <div class="column is-2">
+      <h4 class="title is-6">Weather</h4>
+      {{#if station.summary.latestReport}}
+        <img
+          src="https://openweathermap.org/img/wn/{{stationSummary.weatherIcon}}@2x.png"
+          alt="Icon"
+        />
+        <p>Code: {{station.summary.latestReport.code}}</p>
+      {{else}}
+        <p>No weather data</p>
+      {{/if}}
     </div>
-    <p>{{stationSummary.code}}</p>
-  </div>
-  <div class="column">
-    <div class="columns">
-      <h4 class="is-size-4 column">Temp</h4>
-      <img class="column" src="" alt="" />
+
+    <div class="column is-2">
+      <h4 class="title is-6">Temp</h4>
+      {{station.summary.latestReport}}
+      <p>Temperature</p>
+      <p>Current: {{station.summary.latestReport.temp}}°C</p>
+      <p>Min: {{station.summary.minTemp}}°C</p>
+      <p>Max: {{station.summary.maxTemp}}°C</p>
     </div>
-    <p>{{stationSummary.temp}}</p>
-    <p>{{stationSummary.minTemp}}</p>
-    <p>{{stationSummary.maxTemp}}</p>
-  </div>
-  <div class="column">
-    <div class="columns">
-      <h4 class="is-size-4 column">Wind</h4>
-      <img class="column" src="" alt="" />
+
+    <div class="column is-3">
+      <h4 class="title is-6">Wind</h4>
+      {{#if station.summary.latestReport}}
+        <p>Speed: {{station.summary.windSpeed}} km/h</p>
+        <p>Dir: {{station.summary.windDirection}}</p>
+      {{else}}
+        <p>No wind data</p>
+      {{/if}}
     </div>
-    <p>{{stationSummary.windSpeed}}</p>
-    <p>{{stationSummary.windDirection}}</p>
-  </div>
-  <div class="column">
-    <div class="columns">
-      <h4 class="is-size-4 column">Pressure</h4>
-      <img class="column" src="" alt="" />
+
+    <div class="column is-2">
+      <h4 class="title is-6">Pressure</h4>
+      {{#if station.summary.latestReport}}
+        <p>{{station.summary.pressure}} hPa</p>
+      {{else}}
+        <p>No pressure data</p>
+      {{/if}}
     </div>
-    <p>{{stationSummary.pressure}}</p>
+
   </div>
 </div>

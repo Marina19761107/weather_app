@@ -9,5 +9,19 @@
   <a href="/dashboard/deletestation/{{_id}}" class="button">
     {{>icons/delete}}
   </a>
+
+ {{#if summary.latestReport}}
+    <p>Temp: {{summary.latestReport.temp}} °C</p>
+    <p>Min: {{summary.minTemp}} °C | Max: {{summary.maxTemp}} °C</p>
+    <p>Wind: {{summary.windSpeed}} km/h</p>
+    <p>Pressure: {{summary.pressure}} hPa</p>
+    <p>Code: {{summary.latestReport.code}}</p>
+    {{#if summary.weatherIcon}}
+      <img src="https://openweathermap.org/img/wn/{{summary.weatherIcon}}@2x.png" alt="Weather Icon" />
+    {{/if}}
+  {{else}}
+    <p>No weather report available</p>
+  {{/if}}
+
 </div>
 {{/each}}

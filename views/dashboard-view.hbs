@@ -1,6 +1,15 @@
 {{> menu active="dashboard"}}
 
 <section class="section">
-  {{> list-stations}}
+  <div class="columns is-multiline">
+    {{#each stations}}
+      <div class="column is-half">
+        {{> station-summary station=this stationSummary=this.stationSummary}}
+      </div>
+    {{/each}}
+  </div>
+
+  <hr>
+
   {{> add-station}}
 </section>
