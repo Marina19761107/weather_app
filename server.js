@@ -8,6 +8,7 @@ import { router } from "./routes.js";
 const app = express();
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(fileUpload());
 app.engine(".hbs", engine({ extname: ".hbs" }));
@@ -16,5 +17,7 @@ app.set("views", "./views");
 app.use("/", router);
 
 const listener = app.listen(process.env.PORT || 4000, function () {
-  console.log(`Todolist started on http://localhost:${listener.address().port}`);
+  console.log(
+    `Todolist started on http://localhost:${listener.address().port}`
+  );
 });
