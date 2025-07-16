@@ -21,6 +21,7 @@ export function summarizeStationWeather(station) {
       minTemp: "N/A",
       maxTemp: "N/A",
       weatherIcon: "na",
+      weatherDescription: "N/A",
       pressure: "N/A",
       windSpeed: "N/A",
       windDirection: "N/A",
@@ -32,14 +33,17 @@ export function summarizeStationWeather(station) {
   const minTemp = Math.min(...temps);
   const maxTemp = Math.max(...temps);
   const weatherIcon = getWeatherIcon(latestReport.code);
+  const weatherDescription = latestReport.description || "N/A";
 
   return {
     latestReport,
     minTemp,
     maxTemp,
     weatherIcon,
+
     pressure: latestReport.pressure,
     windSpeed: latestReport.windSpeed,
     windDirection: latestReport.windDirection,
+    weatherDescription: latestReport.description,
   };
 }

@@ -38,6 +38,7 @@ export const stationlistController = {
       windSpeed: Number(request.body.windSpeed),
       pressure: Number(request.body.pressure),
       windDirection: request.body.windDirection,
+      description: request.body.description,
       userid: loggedInUser._id,
       createdAt: dayjs().format("YYYY-MM-DD HH:mm:ss"),
     };

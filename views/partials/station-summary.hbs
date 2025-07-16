@@ -1,11 +1,11 @@
 <div class="box has-background-white mb-5">
-  <div class="columns is-multiline is-align-items-stretch is-variable is-3">
+  <div class="columns is-multiline is-align-items-stretch is-variable is-1">
 
     <div class="column is-one-fifth">
       <div class="card has-background-black has-text-white" style="height: 100%;">
         <div class="card-content">
            <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
-       <h4 class="title is-5 has-text-white">{{station.title}}</h4>
+       <h4 class="title is-6 has-text-white">{{station.title}}</h4>
         <figure class="image is-52x52">
           {{> icons/location }}
         </figure>
@@ -21,10 +21,11 @@
     <div class="column is-one-fifth">
       <div class="card has-background-black has-text-white" style="height: 100%;">
         <div class="card-content has-text-centered">
-          <h4 class="title is-6 has-text-white">Weather</h4>
+          <h4 class="title is-6 has-text-white m-o">Weather</h4>
           <figure class="image is-64x64 is-inline-block mb-2">
             <img src="https://openweathermap.org/img/wn/{{station.summary.weatherIcon}}@2x.png" alt="Weather Icon" />
           </figure>
+          <p>{{station.summary.weatherDescription}}</p>
         </div>
       </div>
     </div>

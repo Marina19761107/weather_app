@@ -2,25 +2,46 @@
   "file": "./models/playlists.json",
   "stations": [
     {
-      "title": "London",
-      "latitude": 51.5073,
-      "longitude": -0.1277,
-      "userid": "719dceff-e23e-46e7-89fa-36c5c9ac41ed",
-      "_id": "2647b4d2-8c18-47a3-9476-ba8f3fac54d1"
-    },
-    {
-      "title": "Sligo",
-      "latitude": 54.2667,
-      "longitude": 8.4833,
+      "title": "Balbriggan",
+      "latitude": 52.1624,
+      "longitude": -7.1524,
       "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
-      "_id": "63e5e707-5dd2-458c-9a6d-3b13b1d36c24"
+      "_id": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
     },
     {
-      "title": "Tramore",
-      "latitude": 52.16,
-      "longitude": 7.152,
+      "title": "Dublin",
+      "latitude": 37.7021,
+      "longitude": -121.9358,
+      "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
+      "_id": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
+    },
+    {
+      "title": "Belfast",
+      "latitude": 54.5833,
+      "longitude": -5.9333,
+      "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
+      "_id": "cf294999-95c5-46e9-9d59-7bd9c9ac5ce2"
+    },
+    {
+      "title": "London",
+      "latitude": 51.5085,
+      "longitude": -0.1257,
       "userid": "719dceff-e23e-46e7-89fa-36c5c9ac41ed",
-      "_id": "0eacad40-3aad-4880-a3ef-2eaa6ef30185"
+      "_id": "42f256c8-82db-4d40-a990-f8f629dc016b"
+    },
+    {
+      "title": "Paphos",
+      "latitude": 34.7667,
+      "longitude": 32.4167,
+      "userid": "719dceff-e23e-46e7-89fa-36c5c9ac41ed",
+      "_id": "5f69e042-6e06-4ceb-ba97-40a7a1e35e00"
+    },
+    {
+      "title": "Marmaris",
+      "latitude": 36.855,
+      "longitude": 28.2742,
+      "userid": "719dceff-e23e-46e7-89fa-36c5c9ac41ed",
+      "_id": "f25afa58-d322-4989-964c-1776d933bf07"
     }
   ]
 }
