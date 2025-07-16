@@ -2,12 +2,18 @@ import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import { summarizeStationWeather } from "../utils/weather-summary.js";
 import { accountsController } from "./accounts-controller.js";
+import { formatDate } from "../utils/formatDate.js";
+import dayjs from "dayjs";
 
 export const stationlistController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const stationId = request.params.id;
     const station = await stationStore.getStationById(stationId);
+
+    station.reports.forEach((report) => {
+      report.createdAtFormatted = formatDate(report.createdAt);
+    });
 
     const stationWithSummary = {
       ...station,
@@ -33,6 +39,7 @@ export const stationlistController = {
       pressure: Number(request.body.pressure),
       windDirection: request.body.windDirection,
       userid: loggedInUser._id,
+      createdAt: dayjs().format("YYYY-MM-DD HH:mm:ss"),
     };
 
     console.log(`adding report ${newReport.title}`);

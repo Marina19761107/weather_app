@@ -1,56 +1,87 @@
-<div class="box has-background-dark has-text-white">
-  <div class="columns is-vcentered is-multiline">
+<div class="box has-background-white mb-5">
+  <div class="columns is-multiline is-align-items-stretch is-variable is-3">
 
-    <div class="column is-2">
-      <h4 class="title is-5" style="color: white">{{station.title}}</h4>
-      <p>Lat: {{station.latitude}}</p>
-      <p>Long: {{station.longitude}}</p>
-      <a
-        href="/station/{{station._id}}"
-        class="button is-small is-info mt-2"
-      >View</a>
+    <div class="column is-one-fifth">
+      <div class="card has-background-black has-text-white" style="height: 100%;">
+        <div class="card-content">
+           <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
+       <h4 class="title is-5 has-text-white">{{station.title}}</h4>
+        <figure class="image is-52x52">
+          {{> icons/location }}
+        </figure>
+      </div>
+
+          
+          <p>Lat: {{station.latitude}}</p>
+          <p>Long: {{station.longitude}}</p>
+        </div>
+      </div>
     </div>
 
-    <div class="column is-2">
-      <h4 class="title is-6">Weather</h4>
-      {{#if station.summary.latestReport}}
-        <img
-          src="https://openweathermap.org/img/wn/{{stationSummary.weatherIcon}}@2x.png"
-          alt="Icon"
-        />
-        <p>Code: {{station.summary.latestReport.code}}</p>
-      {{else}}
-        <p>No weather data</p>
-      {{/if}}
+    <div class="column is-one-fifth">
+      <div class="card has-background-black has-text-white" style="height: 100%;">
+        <div class="card-content has-text-centered">
+          <h4 class="title is-6 has-text-white">Weather</h4>
+          <figure class="image is-64x64 is-inline-block mb-2">
+            <img src="https://openweathermap.org/img/wn/{{station.summary.weatherIcon}}@2x.png" alt="Weather Icon" />
+          </figure>
+        </div>
+      </div>
     </div>
 
-    <div class="column is-2">
-      <h4 class="title is-6">Temp</h4>
-      {{station.summary.latestReport}}
-      <p>Temperature</p>
-      <p>Current: {{station.summary.latestReport.temp}}°C</p>
-      <p>Min: {{station.summary.minTemp}}°C</p>
-      <p>Max: {{station.summary.maxTemp}}°C</p>
+    <div class="column is-one-fifth">
+      <div class="card has-background-black has-text-white" style="height: 100%;">
+        <div class="card-content">
+         <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
+        <h4 class="title is-6 has-text-white m-0">Temp</h4>
+        <figure class="image is-32x32">
+          {{> icons/temp }}
+        </figure>
+      </div>
+          <p>Current: {{station.summary.latestReport.temp}}°C</p>
+          <p>Min: {{station.summary.minTemp}}°C</p>
+          <p>Max: {{station.summary.maxTemp}}°C</p>
+        </div>
+      </div>
     </div>
 
-    <div class="column is-3">
-      <h4 class="title is-6">Wind</h4>
-      {{#if station.summary.latestReport}}
-        <p>Speed: {{station.summary.windSpeed}} km/h</p>
-        <p>Dir: {{station.summary.windDirection}}</p>
-      {{else}}
-        <p>No wind data</p>
-      {{/if}}
+    <div class="column is-one-fifth">
+      <div class="card has-background-black has-text-white" style="height: 100%;">
+        <div class="card-content">
+         <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
+        <h4 class="title is-6 has-text-white m-0">Wind</h4>
+        <figure class="image is-32x32">
+          {{> icons/wind }}
+        </figure>
+      </div>
+          <p>Speed: {{station.summary.windSpeed}} km/h</p>
+          <p>Direction: {{station.summary.windDirection}}</p>
+        </div>
+      </div>
     </div>
 
-    <div class="column is-2">
-      <h4 class="title is-6">Pressure</h4>
-      {{#if station.summary.latestReport}}
-        <p>{{station.summary.pressure}} hPa</p>
-      {{else}}
-        <p>No pressure data</p>
-      {{/if}}
+    <div class="column is-one-fifth">
+      <div class="card has-background-black has-text-white" style="height: 100%;">
+        <div class="card-content">
+             <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
+        <h4 class="title is-6 has-text-white m-0">Pressure</h4>
+        <figure class="image is-32x32">
+          {{> icons/pressure }}
+        </figure>
+      </div>
+          <p>{{station.summary.pressure}} hPa</p>
+        </div>
+      </div>
     </div>
 
+  </div>
+
+  <div class="buttons mt-3 ml-2">
+    <a href="/station/{{station._id}}" class="button is-small is-white" title="View station">
+      {{> icons/open }}
+    </a>
+    <a href="/dashboard/deletestation/{{station._id}}" class="button is-small is-white" title="Delete station">
+      {{> icons/delete }}
+    </a>
   </div>
 </div>
