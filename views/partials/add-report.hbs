@@ -15,7 +15,7 @@
         <label><b>Wind speed</label></b>
         <input class="input" type="text" placeholder="00.00kMh" name="windSpeed">
       </div>
-         <div class="field">
+      <div class="field">
         <label><b>Wind Direction</b></label>
         <div class="control">
           <div class="select">
@@ -23,21 +23,28 @@
               <option value="N">North(0-45)</option>
               <option value="NE">North-East(46-90)</option>
               <option value="E">East(91-135)</option>
-              <option value="NE">South-East(136-180)</option>
+              <option value="SE">South-East(136-180)</option>
               <option value="S">South(181-225)</option>
-              <option value="NE">South-West(226-270)</option>
+              <option value="SW">South-West(226-270)</option>
               <option value="W">West(271-315)</option>
-              <option value="NE">North-West(316-360)</option>
+              <option value="NW">North-West(316-360)</option>
              
             </select>
           </div>
         </div>
       </div>
+    
       <div class="field">
         <label><b>Pressure</label></b>
         <input class="input" type="text" placeholder="000hPa" name="pressure">
       </div>
     </div>
   </div>
+
   <button class="button is-primary">Submit report</button>
 </form>
+
+<form action="/station/{{station._id}}/auto-report" method="POST" class="mt-3">
+  <button class="button is-link mt-2">Auto‑Generate Report</button>
+</form>
+ 

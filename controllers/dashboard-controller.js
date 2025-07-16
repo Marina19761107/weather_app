@@ -1,9 +1,8 @@
 import axios from "axios";
 import { stationStore } from "../models/station-store.js";
+import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { summarizeStationWeather } from "../utils/weather-summary.js";
-
-const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=71d7cc3d2690016435b982c9101bd14b`;
 
 export const dashboardController = {
   async index(request, response) {
@@ -26,6 +25,43 @@ export const dashboardController = {
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
+  },
+  async autoGenerateReport(request, response) {
+    try {
+      const stationId = request.params.id;
+      const station = await stationStore.getStationById(stationId);
+
+      if (!station) {
+        return response.status(404).send("Station not found");
+      }
+
+      const lat = station.latitude;
+      const lon = station.longitude;
+      const apiKey = "71d7cc3d2690016435b982c9101bd14b";
+      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+      const result = await axios.get(weatherUrl);
+
+      if (result.status === 200) {
+        const data = result.data;
+        const newReport = {
+          code: data.weather[0].id,
+          description: data.weather[0].description,
+          temp: data.main.temp,
+          windSpeed: data.wind.speed,
+          pressure: data.main.pressure,
+          windDirection: data.wind.deg,
+          createdAt: new Date(),
+        };
+
+        await reportStore.addReport(stationId, newReport);
+      }
+
+      response.redirect(`/station/${stationId}`);
+    } catch (error) {
+      console.error("Error generating report:", error);
+      response.status(500).send("Error generating report");
+    }
   },
 
   async addStation(request, response) {

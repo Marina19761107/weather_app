@@ -40,7 +40,7 @@ export function summarizeStationWeather(station) {
     minTemp,
     maxTemp,
     weatherIcon,
-
+    weatherDescription,
     pressure: latestReport.pressure,
     windSpeed: latestReport.windSpeed,
     windDirection: latestReport.windDirection,
