@@ -1,8 +1,9 @@
-# Playlist Changelog
+# Weather App
 
 ## version 0.1.0
 
-- initial version ported from glitch-template
-- introduce playlist-store model for simple playlists
-- allow playlists to be added to this model
-- list all playlists in the model
+- Added weather report fetching from OpenWeatherMap API
+- Implemented auto-generate weather reading button
+- Improved weather summary with description and icons
+- Added user authentication and station management
+- Fixed bugs related to report creation and deletion
