@@ -23,6 +23,10 @@ router.get(
   "/station/:stationid/deletereport/:reportid",
   stationlistController.deleteReport
 );
+router.post(
+  "/station/:stationid/updatereport/:reportid",
+  stationlistController.updateReport
+);
 
 router.get("/about", aboutController.index);
 router.get("/logout", accountsController.logout);

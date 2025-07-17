@@ -8,5 +8,25 @@
   {{> list-reports}}
   {{> add-report}}
   {{> chart}}
+  {{> station}}
+  {{> edit-report}}
+  <div id="map" style="height: 400px; margin-top: 20px;"></div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const lat = parseFloat("{{station.latitude}}"); 
+      const lon = parseFloat("{{station.longitude}}"); 
+      const title = "{{station.title}}";
+
+        const map = L.map("map").setView([lat, lon], 13);
+
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+        }).addTo(map);
+
+        L.marker([lat, lon]).addTo(map).bindPopup(title).openPopup();
+      
+    });
+  </script>
 </section>

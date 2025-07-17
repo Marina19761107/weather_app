@@ -12,4 +12,37 @@
   <hr>
 
   {{> add-station}}
+  <div id="map" style="height: 400px;"></div>
+  
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+   
+    const map = L.map("map").setView([53.3498, -6.2603], 5);  
+
+    
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    const stations = [
+      {{#each stations}}
+        {
+          "title": "{{this.title}}",
+          "latitude": {{this.latitude}},
+          "longitude": {{this.longitude}}
+        }{{#unless @last}},{{/unless}}
+      {{/each}}
+    ];
+
+
+    stations.forEach(function(station) {
+      if (!isNaN(station.latitude) && !isNaN(station.longitude)) {
+        L.marker([station.latitude, station.longitude])
+          .addTo(map)
+          .bindPopup(station.title);  
+      }
+    });
+  });
+</script>

@@ -3,6 +3,11 @@
     Weather Top
   </a>
   <div class="has-text-weight-semibold is-size-5">
-    Weather Top Service Inc.
+    {{#if station}}
+      {{station.title}}
+      Weather Station
+    {{else}}
+      Weather Top Service Inc.
+    {{/if}}
   </div>
 </div>

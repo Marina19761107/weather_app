@@ -42,6 +42,13 @@
       "longitude": 28.2742,
       "userid": "719dceff-e23e-46e7-89fa-36c5c9ac41ed",
       "_id": "f25afa58-d322-4989-964c-1776d933bf07"
+    },
+    {
+      "title": "Dublin",
+      "latitude": 53.3498,
+      "longitude": -6.2603,
+      "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
+      "_id": "f00618a7-4969-4d84-bc9a-099ebf9e1ee2"
     }
   ]
 }
