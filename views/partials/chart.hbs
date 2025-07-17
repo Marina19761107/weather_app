@@ -1,0 +1,14 @@
+<div class="box" id="chart"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => { const data = { labels: [
+  {{#each trendLabels}}
+    "{{this}}"{{#unless @last}},{{/unless}}
+  {{/each}}
+  ], datasets: [ { name: "Temperature", type: "line", values: [
+  {{#each tempTrend}}
+    {{this}}{{#unless @last}},{{/unless}}
+  {{/each}}
+  ] } ] }; new frappe.Chart("#chart", { title: "Temperature Trend", data: data,
+  type: "line", height: 250, colors: ["blue"] }); });
+</script>

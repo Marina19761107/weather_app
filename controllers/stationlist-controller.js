@@ -4,6 +4,9 @@ import { summarizeStationWeather } from "../utils/weather-summary.js";
 import { accountsController } from "./accounts-controller.js";
 import { formatDate } from "../utils/formatDate.js";
 import dayjs from "dayjs";
+import axios from "axios";
+
+const apiKey = "71d7cc3d2690016435b982c9101bd14b";
 
 export const stationlistController = {
   async index(request, response) {
@@ -15,6 +18,26 @@ export const stationlistController = {
       report.createdAtFormatted = formatDate(report.createdAt);
     });
 
+    const sortedReports = [...station.reports].sort(
+      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    );
+    const lastReport = sortedReports.length > 0 ? sortedReports[0] : null;
+
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${station.latitude}&lon=${station.longitude}&units=metric&appid=${apiKey}`;
+    const forecastResult = await axios.get(forecastUrl);
+    const forecastList = forecastResult.data.list;
+
+    const maxItems = Math.min(10, forecastList.length);
+    const tempTrend = [];
+    const trendLabels = [];
+
+    for (let i = 0; i < maxItems; i++) {
+      tempTrend.push(forecastList[i].main.temp);
+      const formattedLabel = dayjs(forecastList[i].dt_txt).format(
+        "YYYY-MM-DD HH:mm"
+      );
+      trendLabels.push(formattedLabel);
+    }
     const stationWithSummary = {
       ...station,
       summary: summarizeStationWeather(station),
@@ -23,9 +46,12 @@ export const stationlistController = {
     const viewData = {
       title: "Station Details",
       station: stationWithSummary,
+      reports: station.reports,
       loggedInUser,
+      tempTrend,
+      trendLabels,
+      lastReport,
     };
-
     response.render("station-view", viewData);
   },
 
