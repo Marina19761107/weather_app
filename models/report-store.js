@@ -30,9 +30,7 @@ export const reportStore = {
 
   async deleteReport(id) {
     await db.read();
-    const index = db.data.reports.findIndex(
-    (report) => report._id === id
-    );
+    const index = db.data.reports.findIndex((report) => report._id === id);
     db.data.reports.splice(index, 1);
     await db.write();
   },
@@ -42,13 +40,17 @@ export const reportStore = {
     await db.write();
   },
 
-  async updateReport(report, updatedReport) {
+  async updateReport(reportId, updatedReport) {
+    await db.read();
+    const report = db.data.reports.find((report) => report._id === reportId);
+
     report.code = updatedReport.code;
     report.temp = updatedReport.temp;
     report.windSpeed = updatedReport.windSpeed;
     report.windDirection = updatedReport.windDirection;
-    report.preassure = updatedReport.preassure;
+    report.pressure = updatedReport.pressure;
+
     await db.write();
+    return report;
   },
 };
-

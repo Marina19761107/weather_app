@@ -15,6 +15,9 @@ app.engine(
   ".hbs",
   engine({
     extname: ".hbs",
+    helpers: {
+      eq: (a, b) => a === b,
+    },
   })
 );
 app.set("view engine", ".hbs");

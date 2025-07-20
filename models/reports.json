@@ -191,28 +191,6 @@
       "windSpeed": 3.58,
       "pressure": 1014,
       "windDirection": 217,
-      "createdAt": "2025-07-17T13:04:59.867Z",
-      "_id": "8514b061-3ae7-4baf-aec2-bae53e2275fc",
-      "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
-    },
-    {
-      "code": 804,
-      "description": "overcast clouds",
-      "temp": 20.03,
-      "windSpeed": 3.58,
-      "pressure": 1014,
-      "windDirection": 217,
-      "createdAt": "2025-07-17T13:07:01.416Z",
-      "_id": "7cee8aff-9917-4dea-8239-106241023947",
-      "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
-    },
-    {
-      "code": 804,
-      "description": "overcast clouds",
-      "temp": 20.03,
-      "windSpeed": 3.58,
-      "pressure": 1014,
-      "windDirection": 217,
       "createdAt": "2025-07-17T13:07:13.856Z",
       "_id": "5aeb0da2-d0d6-40d5-bffb-979b874aeece",
       "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"

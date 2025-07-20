@@ -82,6 +82,23 @@ export const stationlistController = {
     await reportStore.deleteReport(reportId);
     response.redirect("/station/" + stationId);
   },
+
+  async editReport(request, response) {
+    const stationId = request.params.stationid;
+    const reportId = request.params.reportid;
+
+    const station = await stationStore.getStationById(stationId);
+    const report = await reportStore.getReportById(reportId);
+
+    const viewData = {
+      title: "Update report details",
+      station,
+      report,
+    };
+
+    response.render("station-view", viewData);
+  },
+
   async updateReport(request, response) {
     const stationId = request.params.stationid;
     const reportId = request.params.reportid;
@@ -91,7 +108,6 @@ export const stationlistController = {
       windSpeed: Number(request.body.windSpeed),
       pressure: Number(request.body.pressure),
       windDirection: request.body.windDirection,
-      description: request.body.description,
     };
     console.log(`Updating Report ${reportId} from Station ${stationId}`);
     await reportStore.updateReport(reportId, updatedReport);

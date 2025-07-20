@@ -23,6 +23,10 @@ router.get(
   "/station/:stationid/deletereport/:reportid",
   stationlistController.deleteReport
 );
+router.get(
+  "/station/:stationid/editreport/:reportid",
+  stationlistController.editReport
+);
 router.post(
   "/station/:stationid/updatereport/:reportid",
   stationlistController.updateReport
