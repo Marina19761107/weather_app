@@ -125,7 +125,7 @@
       "temp": 20.9,
       "windSpeed": 3.6,
       "pressure": 1016,
-      "windDirection": 170,
+      "windDirection": "SE",
       "createdAt": "2025-07-16T17:11:33.088Z",
       "_id": "2026853b-a43f-49b0-ae05-d426ba4f9998",
       "stationid": "cf294999-95c5-46e9-9d59-7bd9c9ac5ce2"
@@ -146,7 +146,7 @@
       "temp": 19.9,
       "windSpeed": 3.6,
       "pressure": 1016,
-      "windDirection": 160,
+      "windDirection": "SE",
       "createdAt": "2025-07-16T18:45:49.070Z",
       "_id": "bb8417c9-9e77-4428-965a-6de37903b3c9",
       "stationid": "cf294999-95c5-46e9-9d59-7bd9c9ac5ce2"
@@ -201,7 +201,7 @@
       "temp": 17.9,
       "windSpeed": 4.63,
       "pressure": 1013,
-      "windDirection": 150,
+      "windDirection": "SE",
       "createdAt": "2025-07-17T13:34:11.293Z",
       "_id": "6bc305ad-71b2-47be-8748-5f3df9e008a9",
       "stationid": "cf294999-95c5-46e9-9d59-7bd9c9ac5ce2"
@@ -212,7 +212,7 @@
       "temp": 17.9,
       "windSpeed": 4.12,
       "pressure": 1013,
-      "windDirection": 170,
+      "windDirection": "SE",
       "createdAt": "2025-07-17T13:47:54.049Z",
       "_id": "c6fdca09-9179-4a2b-b63d-4d463e1ed566",
       "stationid": "cf294999-95c5-46e9-9d59-7bd9c9ac5ce2"
@@ -249,6 +249,94 @@
       "createdAt": "2025-07-17T21:02:53.893Z",
       "_id": "d8b6e98a-5150-4d2e-b40f-e95536811ecf",
       "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
+    },
+    {
+      "code": 801,
+      "description": "few clouds",
+      "temp": 20.42,
+      "windSpeed": 6.68,
+      "pressure": 1018,
+      "windDirection": 8,
+      "createdAt": "2025-07-20T20:33:57.176Z",
+      "_id": "e7491bd1-0c71-4099-a3a0-a7c258fd9f60",
+      "stationid": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
+    },
+    {
+      "code": 502,
+      "description": "heavy intensity rain",
+      "temp": 16.88,
+      "windSpeed": 2.57,
+      "pressure": 998,
+      "windDirection": 350,
+      "createdAt": "2025-07-20T21:32:53.533Z",
+      "_id": "290e6363-f427-42cf-bd63-82125f4973ce",
+      "stationid": "f00618a7-4969-4d84-bc9a-099ebf9e1ee2"
+    },
+    {
+      "code": 501,
+      "description": "moderate rain",
+      "temp": 15.93,
+      "windSpeed": 0.73,
+      "pressure": 998,
+      "windDirection": 272,
+      "createdAt": "2025-07-20T21:44:29.442Z",
+      "_id": "8f65ca49-15ef-427e-bf95-64fe29301cc3",
+      "stationid": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
+    },
+    {
+      "code": 501,
+      "description": "moderate rain",
+      "temp": 16.36,
+      "windSpeed": 1.86,
+      "pressure": 998,
+      "windDirection": 56,
+      "createdAt": "2025-07-20T21:45:22.481Z",
+      "_id": "e39b2b18-82ca-4cc7-9213-bc5f04613ec8",
+      "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
+    },
+    {
+      "code": 803,
+      "description": "broken clouds",
+      "temp": 17.88,
+      "windSpeed": 3.09,
+      "pressure": 998,
+      "windDirection": "N",
+      "createdAt": "2025-07-20T21:46:04.911Z",
+      "_id": "cc6c295d-e22c-45d3-99eb-fe589a873cf0",
+      "stationid": "cf294999-95c5-46e9-9d59-7bd9c9ac5ce2"
+    },
+    {
+      "code": 803,
+      "description": "broken clouds",
+      "temp": 17.88,
+      "windSpeed": 3.09,
+      "pressure": 998,
+      "windDirection": "S",
+      "createdAt": "2025-07-20T21:47:34.861Z",
+      "_id": "33e36d58-6c32-48a7-87f4-4f87eea7d643",
+      "stationid": "cf294999-95c5-46e9-9d59-7bd9c9ac5ce2"
+    },
+    {
+      "code": 804,
+      "description": "overcast clouds",
+      "temp": 16.06,
+      "windSpeed": 3.13,
+      "pressure": 999,
+      "windDirection": "N",
+      "createdAt": "2025-07-20T21:49:32.398Z",
+      "_id": "e9e04331-bf0e-496f-954e-34d66d906bf4",
+      "stationid": "5264b84b-1f46-47cb-939a-ea51a1374118"
+    },
+    {
+      "code": 802,
+      "description": "scattered clouds",
+      "temp": 19.49,
+      "windSpeed": 2.27,
+      "pressure": 1006,
+      "windDirection": "N",
+      "createdAt": "2025-07-20T21:55:55.978Z",
+      "_id": "ec92f3e6-91e0-4c31-8529-0f93117738af",
+      "stationid": "ce727edf-f2f7-46ba-8ce5-d598cd93e9a3"
     }
   ]
 }

@@ -37,4 +37,6 @@ router.get("/logout", accountsController.logout);
 
 router.get("/weatherTop", weatherTopController.index);
 
+router.post("/station/:id/update", dashboardController.updateStationDetails);
+
 router.post("/station/:id/auto-report", dashboardController.autoGenerateReport);

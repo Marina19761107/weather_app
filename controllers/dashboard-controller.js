@@ -94,4 +94,17 @@ export const dashboardController = {
     await stationStore.deleteStationById(stationId);
     response.redirect("/dashboard");
   },
+
+  async updateStationDetails(request, response) {
+    const stationId = request.params.id;
+
+    const updatedData = {
+      title: request.body.title,
+      latitude: Number(request.body.latitude),
+      longitude: Number(request.body.longitude),
+    };
+
+    await stationStore.updateStationDetails(stationId, updatedData);
+    response.redirect(`/station/${stationId}`); // or /dashboard
+  },
 };

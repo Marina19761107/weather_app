@@ -3,15 +3,15 @@
   "stations": [
     {
       "title": "Balbriggan",
-      "latitude": 52.1624,
-      "longitude": -7.1524,
+      "latitude": 53.6083,
+      "longitude": -6.184122,
       "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
       "_id": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
     },
     {
       "title": "Dublin",
-      "latitude": 37.7021,
-      "longitude": -121.9358,
+      "latitude": 53.1959,
+      "longitude": -6.1456,
       "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
       "_id": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
     },
@@ -44,11 +44,18 @@
       "_id": "f25afa58-d322-4989-964c-1776d933bf07"
     },
     {
-      "title": "Dublin",
-      "latitude": 53.3498,
-      "longitude": -6.2603,
+      "title": "Cork",
+      "latitude": 51.9036,
+      "longitude": -8.4683,
       "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
-      "_id": "f00618a7-4969-4d84-bc9a-099ebf9e1ee2"
+      "_id": "5264b84b-1f46-47cb-939a-ea51a1374118"
+    },
+    {
+      "title": "Riga",
+      "latitude": 56.5645,
+      "longitude": 24.0621,
+      "userid": "cd7fe46f-b82a-4a9d-a57d-660fe927958f",
+      "_id": "ce727edf-f2f7-46ba-8ce5-d598cd93e9a3"
     }
   ]
 }

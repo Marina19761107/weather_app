@@ -57,4 +57,15 @@ export const stationStore = {
     db.data.stations = [];
     await db.write();
   },
+
+  async updateStationDetails(id, updatedData) {
+    await db.read();
+    const station = db.data.stations.find((station) => station._id === id);
+    if (station) {
+      station.title = updatedData.title;
+      station.latitude = updatedData.latitude;
+      station.longitude = updatedData.longitude;
+      await db.write();
+    }
+  },
 };

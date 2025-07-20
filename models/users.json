@@ -154,6 +154,13 @@
       "email": "erikx28@gmail.com",
       "password": "4321",
       "_id": "5dd8d700-0ce4-4f09-a952-f7072ff67376"
+    },
+    {
+      "firstName": "Dzintra",
+      "lastName": "Zauska",
+      "email": "dzintra.vidzeme@inbox.lv",
+      "password": "5678",
+      "_id": "cd7fe46f-b82a-4a9d-a57d-660fe927958f"
     }
   ]
 }
