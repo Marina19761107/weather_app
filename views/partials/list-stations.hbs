@@ -16,12 +16,9 @@
     <p>Wind: {{summary.windSpeed}} km/h</p>
     <p>Pressure: {{summary.pressure}} hPa</p>
     <p>Code: {{summary.latestReport.code}}</p>
-    {{#if summary.weatherIcon}}
+    {{#ifsummary.weatherIcon}}
       <img src="https://openweathermap.org/img/wn/{{summary.weatherIcon}}@2x.png" alt="Weather Icon" />
     {{/if}}
-  {{else}}
-    <p>No weather report available</p>
-  {{/if}}
 
 </div>
 {{/each}}

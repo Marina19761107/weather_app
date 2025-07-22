@@ -337,6 +337,17 @@
       "createdAt": "2025-07-20T21:55:55.978Z",
       "_id": "ec92f3e6-91e0-4c31-8529-0f93117738af",
       "stationid": "ce727edf-f2f7-46ba-8ce5-d598cd93e9a3"
+    },
+    {
+      "code": 804,
+      "description": "overcast clouds",
+      "temp": 19.36,
+      "windSpeed": 3.32,
+      "pressure": 1012,
+      "windDirection": 274,
+      "createdAt": "2025-07-22T15:20:16.129Z",
+      "_id": "aac8920c-a0b5-4f36-b8f0-9a7f0dd84dc9",
+      "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
     }
   ]
 }
