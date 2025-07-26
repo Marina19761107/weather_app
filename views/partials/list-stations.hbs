@@ -4,10 +4,10 @@
     {{title}}
   </h2>
   <a href="/station/{{_id}}" class="button">
-    {{>icons/open}}
+    {{> icons/open}}
   </a>
   <a href="/dashboard/deletestation/{{_id}}" class="button">
-    {{>icons/delete}}
+    {{> icons/delete}}
   </a>
 
  {{#if summary.latestReport}}
@@ -16,7 +16,7 @@
     <p>Wind: {{summary.windSpeed}} km/h</p>
     <p>Pressure: {{summary.pressure}} hPa</p>
     <p>Code: {{summary.latestReport.code}}</p>
-    {{#ifsummary.weatherIcon}}
+    {{#if summary.weatherIcon}}
       <img src="https://openweathermap.org/img/wn/{{summary.weatherIcon}}@2x.png" alt="Weather Icon" />
     {{/if}}
 

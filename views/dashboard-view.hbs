@@ -5,32 +5,7 @@
     {{#each stations}}
       <div class="column is-full">
         {{> station-summary station=this stationSummary=this.stationSummary}}
-             <form action="/station/{{this._id}}/update" method="POST" class="box mt-4">
-          <div class="field">
-            <label class="label">Title</label>
-            <div class="control">
-              <input class="input" type="text" name="title" value="{{this.title}}" required>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Latitude</label>
-            <div class="control">
-              <input class="input" type="number" step="any" name="latitude" value="{{this.latitude}}" required>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Longitude</label>
-            <div class="control">
-              <input class="input" type="number" step="any" name="longitude" value="{{this.longitude}}" required>
-            </div>
-          </div>
-
-          <div class="control">
-            <button class="button is-success" type="submit">Update Station</button>
-          </div>
-        </form>
+          {{> update-station station=this}}  
 
         <hr>
       </div>
