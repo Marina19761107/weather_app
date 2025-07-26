@@ -1,51 +1,87 @@
-# Weather_App
+# Weather Station Dashboard
 
-A responsive web client for viewing weather forecasts for Berlin, Amsterdam, Paris,Tromso, Cork and Copenhagen.
+A personal dashboard to monitor weather stations with detailed reports, forecasts, and trends.
 
-## Discription
+## Description
 
-View current hight and low temperatures for Berlin, Amsterdam, Paris,Tromso, Cork and Copenhagen.
-Get a 7-day weather forecast for each city.
-Choose the city you're interested in to see detailed weather information.
+- View detailed weather reports per station (temperature, wind speed, wind direction, pressure).
+- Add, edit, or delete weather reports easily.
+- See the latest weather summary for each station with icons.
+- View live temperature forecasts and station locations on a map.
 
 ## Getting Started
 
-### Install Eleventy
+### Prerequisites
+
+- Node.js
+- npm
+- Visual Studio Code (recommended)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Marina19761107/weather_app.git
+   ```
+
+2. Navigate into the project folder:
+
+   ```bash
+   cd weather_app
+   ```
+
+3. Install dependencies:
 
 ```bash
-npm install -g @11ty/eleventy
+ npm install
 ```
 
-### Build the project
+4. Run the project:
 
 ```bash
-npx @11ty/eleventy
+ npm start
 ```
 
-### Run Eleventy
-
-```bash
-npx 11ty/eleventy --serve
-```
-
-Now navigate to [http://localhost:8080](http://localhost:8080) to see the site.
+5. Now navigate to [http://localhost:4080](http://localhost:4080) to see the site.
 
 ## Live demo link
 
-### Netlify
-
-weather-app-ms-as-3.netlify.app
+Hosted on Render: https://weather-app-bw5s.onrender.com
 
 ### GitHyb repository
 
-- [GitHub](https://github.com/Marina19761107/weather/tree/main)
+https://github.com/Marina19761107/weather_app
 
 ## Technologies
 
 - HTML
-- JAvaScript
-- Day.js (for data formattin)
-- [Eleventy](https://www.11ty.dev/)
-- [Bulma](https://bulma.io/)
+- JavaScript
+- [Day.js](https://day.js.org/) (for date formatting)
+- [Axios](https://axios-http.com/)
+- [Bulma](https://bulma.io/) CSS framework
+- [Leaflet.js](https://leafletjs.com/) (for interactive maps)
+- [OpenWeatherMap Weather Conditions API](https://openweathermap.org/weather-conditions)
+- Node.js
+- https://www.npmjs.com/
+- Express (backend framework)
+- Handlebars (templating engine)
 
 Resources:
+
+- https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs
+  https://www.npmjs.com/package/express-handlebars
+  https://www.npmjs.com/package/body-parser
+  https://www.npmjs.com/package/cookie-parser
+  https://www.npmjs.com/package/express-fileupload
+  https://handlebarsjs.com/guide/#custom-helpers
+  https://www.npmjs.com/package/express-handlebars#helpers
+- [Node.js Official Documentation](https://nodejs.org/en/docs/)
+- [Express.js Guide](https://expressjs.com/)
+- [Handlebars.js Documentation](https://handlebarsjs.com/)
+- [Bulma CSS Framework](https://bulma.io/documentation/)
+- [Axios HTTP Client](https://axios-http.com/docs/intro)
+- [Day.js Documentation](https://day.js.org/docs/en/installation/installation)
+- [Leaflet.js Documentation](https://leafletjs.com/reference.html)
+- [OpenWeatherMap API Documentation](https://openweathermap.org/api)
+- [OpenWeatherMap Weather Conditions](https://openweathermap.org/weather-conditions)

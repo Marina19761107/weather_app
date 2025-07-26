@@ -14,6 +14,7 @@ export const userStore = {
     user._id = v4();
     db.data.users.push(user);
     await db.write();
+    console.log("Current users:", db.data.users);
     return user;
   },
 

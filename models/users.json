@@ -161,6 +161,48 @@
       "email": "dzintra.vidzeme@inbox.lv",
       "password": "5678",
       "_id": "cd7fe46f-b82a-4a9d-a57d-660fe927958f"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "bca9471e-153f-4cce-b025-cc537ad04f85"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "d1d7f053-1ada-4a5e-9bf7-edb6bf2bf521"
+    },
+    {
+      "firstName": "Erik",
+      "lastName": "Kisko",
+      "email": "erikx28@gmail.com",
+      "password": "4321",
+      "_id": "5dfd58cd-85f4-47dd-80f8-b8086ea30636"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "5bf5e02b-ef6a-4923-a91d-df8ae373cad4"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "edf80aec-6b42-43c9-a971-2c08f113c0b5"
+    },
+    {
+      "firstName": "Marina",
+      "lastName": "Salina",
+      "email": "marinasal1107@gmail.com",
+      "password": "1234",
+      "_id": "5a14f889-f795-42b2-8cc0-64ad395791ce"
     }
   ]
 }

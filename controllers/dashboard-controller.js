@@ -19,7 +19,7 @@ export const dashboardController = {
     stationsWithSummary.sort((a, b) => a.title.localeCompare(b.title));
 
     const viewData = {
-      title: "Dashbord",
+      title: "Dashboard",
       stations: stationsWithSummary,
       loggedInUser,
     };
