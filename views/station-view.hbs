@@ -1,35 +1,38 @@
 {{> menu}}
 
 <section class="section">
-  <div class="title">
-    {{station.title}}
+  <div class="columns is-multiline mb-2">
+  <div class="column is-full-mobile is-half-tablet is-full-desktop">
+  <h1 class="title">{{station.title}}</h1>
+
+  {{> station-summary station=station stationSummary=station.summary }}
+  {{> list-reports reports=station.reports }}
+  {{> add-report station=station }}
+  {{> edit-report station=station }}
+  {{> chart station=station }}
+    </div>
+
+ <div class="column is-full-mobile is-half-tablet is-full-desktop">
+  <div id="map" style="height: 400px; margin-top: 20px;">
+
   </div>
-  {{> station-summary}}
-  {{> list-reports}}
-  
-  {{> add-report}}
-  {{> edit-report}}
-  {{> chart}}
-  {{> station}}
- 
-
-  <div id="map" style="height: 400px; margin-top: 20px;"></div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const lat = parseFloat("{{station.latitude}}"); 
-      const lon = parseFloat("{{station.longitude}}"); 
-      const title = "{{station.title}}";
-
-        const map = L.map("map").setView([lat, lon], 13);
-
-        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          maxZoom: 19,
-          attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-        }).addTo(map);
-
-        L.marker([lat, lon]).addTo(map).bindPopup(title).openPopup();
-      
-    });
-  </script>
+  </div>
+  </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lat = parseFloat("{{station.latitude}}");
+    const lon = parseFloat("{{station.longitude}}");
+    const title = "{{station.title}}";
+
+    const map = L.map("map").setView([lat, lon], 13);
+
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    L.marker([lat, lon]).addTo(map).bindPopup(title).openPopup();
+  });
+</script>
