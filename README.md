@@ -11,39 +11,27 @@ A personal dashboard to monitor weather stations with detailed reports, forecast
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js
-- npm
-- Visual Studio Code (recommended)
-
 ### Installation
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Marina19761107/weather_app.git
-   ```
-
-2. Navigate into the project folder:
+1. Navigate into the project folder:
 
    ```bash
    cd weather_app
    ```
 
-3. Install dependencies:
+2. Install dependencies:
 
 ```bash
  npm install
 ```
 
-4. Run the project:
+3. Run the project:
 
 ```bash
  npm start
 ```
 
-5. Now navigate to [http://localhost:4080](http://localhost:4080) to see the site.
+4. Now navigate to [http://localhost:4080](http://localhost:4080) to see the site.
 
 ## Live demo link
 
@@ -69,7 +57,7 @@ https://github.com/Marina19761107/weather_app
 
 Resources:
 
-- https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs
+- [Express_Nodejs]https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs
   https://www.npmjs.com/package/express-handlebars
   https://www.npmjs.com/package/body-parser
   https://www.npmjs.com/package/cookie-parser

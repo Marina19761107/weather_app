@@ -1,88 +1,64 @@
-<div class="box has-background-white mb-5">
-  <div class="columns is-multiline is-align-items-stretch is-variable is-1">
-
-    <div class="column is-one-fifth">
-      <div class="card has-background-black has-text-white" style="height: 100%;">
-        <div class="card-content">
-           <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
-       <h4 class="title is-6 has-text-white">{{station.title}}</h4>
-        <figure class="image is-52x52">
-          {{> icons/location }}
-        </figure>
-      </div>
-
-          
-          <p>Lat: {{station.latitude}}</p>
-          <p>Long: {{station.longitude}}</p>
-        </div>
-      </div>
+<div class="columns is-multiline">
+  <div class="column is-flex">
+    <div class="box has-background-black has-text-white is-flex-grow-1">
+      <h4 class="title is-6 has-text-white">{{station.title}}</h4>
+      <figure class="image is-52x52">
+        {{> icons/location }}
+      </figure>
+      <p>Lat: {{station.latitude}}</p>
+      <p>Long: {{station.longitude}}</p>
     </div>
-
-    <div class="column is-one-fifth">
-      <div class="card has-background-black has-text-white" style="height: 100%;">
-        <div class="card-content has-text-centered">
-          <h4 class="title is-6 has-text-white m-o">Weather</h4>
-          <figure class="image is-64x64 is-inline-block mb-2">
-            <img src="https://openweathermap.org/img/wn/{{station.summary.weatherIcon}}@2x.png" alt="Weather Icon" />
-          </figure>
-          <p>{{station.summary.weatherDescription}}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column is-one-fifth">
-      <div class="card has-background-black has-text-white" style="height: 100%;">
-        <div class="card-content">
-         <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
-        <h4 class="title is-6 has-text-white m-0">Temp</h4>
-        <figure class="image is-32x32">
-          {{> icons/temp }}
-        </figure>
-      </div>
-          <p>Current: {{station.summary.latestReport.temp}}°C</p>
-          <p>Min: {{station.summary.minTemp}}°C</p>
-          <p>Max: {{station.summary.maxTemp}}°C</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column is-one-fifth">
-      <div class="card has-background-black has-text-white" style="height: 100%;">
-        <div class="card-content">
-         <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
-        <h4 class="title is-6 has-text-white m-0">Wind</h4>
-        <figure class="image is-32x32">
-          {{> icons/wind }}
-        </figure>
-      </div>
-          <p>Speed: {{station.summary.windSpeed}} km/h</p>
-          <p>Direction: {{station.summary.windDirection}}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column is-one-fifth">
-      <div class="card has-background-black has-text-white" style="height: 100%;">
-        <div class="card-content">
-             <div class="is-flex is-align-items-center is-justify-content-space-between mb-3">
-        <h4 class="title is-6 has-text-white m-0">Pressure</h4>
-        <figure class="image is-32x32">
-          {{> icons/pressure }}
-        </figure>
-      </div>
-          <p>{{station.summary.pressure}} hPa</p>
-        </div>
-      </div>
-    </div>
-
   </div>
 
-  <div class="buttons mt-3 ml-2">
-    <a href="/station/{{station._id}}" class="button is-small is-white" title="View station">
-      {{> icons/open }}
-    </a>
-    <a href="/dashboard/deletestation/{{station._id}}" class="button is-small is-white" title="Delete station">
-      {{> icons/delete }}
-    </a>
+  <div class="column is-flex">
+    <div class="box has-background-black has-text-white is-flex-grow-1">
+      <h4 class="title is-6 has-text-white ">Weather</h4>
+      <figure class="image is-64x64 is-inline-block">
+        <img src="https://openweathermap.org/img/wn/{{station.summary.weatherIcon}}@2x.png" alt="Weather Icon" />
+      </figure>
+      <p>{{station.summary.weatherDescription}}</p>
+    </div>
   </div>
+
+  <div class="column is-flex">
+    <div class="box has-background-black has-text-white is-flex-grow-1">
+      <h4 class="title is-6 has-text-white">Temp</h4>
+      <figure class="image is-32x32">
+        {{> icons/temp }}
+      </figure>
+      <p>Current: {{station.summary.latestReport.temp}}°C</p>
+      <p>Min: {{station.summary.minTemp}}°C</p>
+      <p>Max: {{station.summary.maxTemp}}°C</p>
+    </div>
+  </div>
+<div class="column is-flex">
+    <div class="box has-background-black has-text-white is-flex-grow-1">
+      <h4 class="title is-6 has-text-white">Wind</h4>
+      <figure class="image is-32x32">
+        {{> icons/wind }}
+      </figure>
+      <p>Speed: {{station.summary.windSpeed}} km/h</p>
+      <p>Direction: {{station.summary.windDirection}}</p>
+    </div>
+  </div>
+
+  <div class="column is-flex">
+    <div class="box has-background-black has-text-white is-flex-grow-1">
+      <h4 class="title is-6 has-text-white">Pressure</h4>
+      <figure class="image is-32x32">
+        {{> icons/pressure }}
+      </figure>
+      <p>{{station.summary.pressure}} hPa</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="buttons mt-3 ml-2">
+  <a href="/station/{{station._id}}" class="button is-small is-white" title="View station">
+    {{> icons/open }}
+  </a>
+  <a href="/dashboard/deletestation/{{station._id}}" class="button is-small is-white" title="Delete station">
+    {{> icons/delete }}
+  </a>
 </div>

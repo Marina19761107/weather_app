@@ -2,18 +2,18 @@
 
 <section class="section">
 <div class="columns is-multiline mb-2">
-    <div class="column is-full-mobile is-half-tablet is-full-desktop">
+    <div class="column is-full">
       {{> add-station}}
     </div>
 
-    <div class="column is-full-mobile is-half-tablet is-full-desktop">
+    <div class="column is-full">
       <div id="map" style="height: 400px;"></div>
     </div>
   </div>
 
   <div class="columns is-multiline mt-2">
     {{#each stations}}
-    <div class="column is-full-mobile is-half-tablet is-full-desktop">
+    <div class="column is-full">
         {{> station-summary station=this stationSummary=this.stationSummary}}
           {{> update-station station=this}}  
 

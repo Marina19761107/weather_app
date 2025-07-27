@@ -3,8 +3,7 @@
 <section class="section">
   <h1 class="title">{{title}}</h1>
 
-  <div class="columns is-vcentered">
-    <div class="column is-half">
+  <div class="columns is-vcentered is-half">
       <form action="/register" method="POST">
         <label class="label">Name</label>
         <div class="field is-horizontal">
@@ -29,10 +28,9 @@
           <button class="button is-link">Submit</button>
         </div>
       </form>
-    </div>
 
-     <div class="column is-half">
-      {{> icons/weather-icon}}
+    <div class="column is-half">
+      {{> weather-icons-list}}
     </div>
     
   </div>

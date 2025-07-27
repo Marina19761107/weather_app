@@ -381,6 +381,17 @@
       "createdAt": "2025-07-26T13:29:17.673Z",
       "_id": "c09c8f3b-75f1-4e17-8a7a-5d9a1c544dc7",
       "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
+    },
+    {
+      "code": 803,
+      "description": "broken clouds",
+      "temp": 17.55,
+      "windSpeed": 4.72,
+      "pressure": 1017,
+      "windDirection": 293,
+      "createdAt": "2025-07-27T14:14:11.520Z",
+      "_id": "f0b03e9a-8100-4e7f-8dd3-550b1cd2e086",
+      "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
     }
   ]
 }
