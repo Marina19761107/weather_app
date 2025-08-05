@@ -135,7 +135,7 @@
       "temp": 18.92,
       "windSpeed": 3.6,
       "pressure": 1013,
-      "windDirection": 300,
+      "windDirection": "W",
       "createdAt": "2025-07-16T17:32:36.135Z",
       "_id": "538fb87f-4904-4131-a39b-31d598a3271a",
       "stationid": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
@@ -157,7 +157,7 @@
       "temp": 26.88,
       "windSpeed": 4.12,
       "pressure": 1006,
-      "windDirection": 310,
+      "windDirection": "W",
       "createdAt": "2025-07-16T18:46:16.709Z",
       "_id": "35f9bb93-6a70-48d5-a618-5ddf385d4c62",
       "stationid": "5f69e042-6e06-4ceb-ba97-40a7a1e35e00"
@@ -168,7 +168,7 @@
       "temp": 26.75,
       "windSpeed": 1.94,
       "pressure": 1006,
-      "windDirection": 103,
+      "windDirection": "E",
       "createdAt": "2025-07-16T18:46:43.960Z",
       "_id": "c2a3dec5-2138-4ff2-8028-5f6da92cf55f",
       "stationid": "f25afa58-d322-4989-964c-1776d933bf07"
@@ -179,7 +179,7 @@
       "temp": 23.07,
       "windSpeed": 3.09,
       "pressure": 1016,
-      "windDirection": 350,
+      "windDirection": "NW",
       "createdAt": "2025-07-16T18:47:05.051Z",
       "_id": "b0ab6d93-263b-4c25-9ea2-27fc000a99cc",
       "stationid": "42f256c8-82db-4d40-a990-f8f629dc016b"
@@ -256,7 +256,7 @@
       "temp": 20.42,
       "windSpeed": 6.68,
       "pressure": 1018,
-      "windDirection": 8,
+      "windDirection": "N",
       "createdAt": "2025-07-20T20:33:57.176Z",
       "_id": "e7491bd1-0c71-4099-a3a0-a7c258fd9f60",
       "stationid": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
@@ -278,7 +278,7 @@
       "temp": 15.93,
       "windSpeed": 0.73,
       "pressure": 998,
-      "windDirection": 272,
+      "windDirection": "W",
       "createdAt": "2025-07-20T21:44:29.442Z",
       "_id": "8f65ca49-15ef-427e-bf95-64fe29301cc3",
       "stationid": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
@@ -366,7 +366,7 @@
       "temp": 17.89,
       "windSpeed": 1.03,
       "pressure": 1014,
-      "windDirection": 260,
+      "windDirection": "SW",
       "createdAt": "2025-07-22T16:02:32.776Z",
       "_id": "d1fd6512-4cde-4f8a-97f4-8e72dac0f519",
       "stationid": "5264b84b-1f46-47cb-939a-ea51a1374118"
@@ -392,6 +392,94 @@
       "createdAt": "2025-07-27T14:14:11.520Z",
       "_id": "f0b03e9a-8100-4e7f-8dd3-550b1cd2e086",
       "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
+    },
+    {
+      "code": 800,
+      "description": "clear sky",
+      "temp": 17.14,
+      "windSpeed": 5.18,
+      "pressure": 1024,
+      "windDirection": 288,
+      "createdAt": "2025-08-05T18:50:06.924Z",
+      "_id": "1231766d-1416-40ac-bf7f-bc3877e06a0d",
+      "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
+    },
+    {
+      "code": 803,
+      "description": "broken clouds",
+      "temp": 17.88,
+      "windSpeed": 5.66,
+      "pressure": 1028,
+      "windDirection": "W",
+      "createdAt": "2025-08-05T18:50:33.898Z",
+      "_id": "96f0c731-f67c-43c3-8f06-fecd6e6e162a",
+      "stationid": "5264b84b-1f46-47cb-939a-ea51a1374118"
+    },
+    {
+      "code": 803,
+      "description": "broken clouds",
+      "temp": 17.57,
+      "windSpeed": 6.17,
+      "pressure": 1028,
+      "windDirection": 290,
+      "createdAt": "2025-08-05T18:51:34.449Z",
+      "_id": "376a5f65-3f06-48c9-ad70-c636a2b895c5",
+      "stationid": "5264b84b-1f46-47cb-939a-ea51a1374118"
+    },
+    {
+      "code": 802,
+      "description": "scattered clouds",
+      "temp": 17.39,
+      "windSpeed": 0.45,
+      "pressure": 1025,
+      "windDirection": "N",
+      "createdAt": "2025-08-05T18:51:51.602Z",
+      "_id": "f86f8948-4ad4-4a5c-9367-a688d13a30d7",
+      "stationid": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
+    },
+    {
+      "code": 800,
+      "description": "clear sky",
+      "temp": 20.59,
+      "windSpeed": 6.17,
+      "pressure": 1024,
+      "windDirection": "W",
+      "createdAt": "2025-08-05T18:53:44.373Z",
+      "_id": "681cc2cf-0077-4c94-9e49-b5381648320e",
+      "stationid": "42f256c8-82db-4d40-a990-f8f629dc016b"
+    },
+    {
+      "code": 800,
+      "description": "clear sky",
+      "temp": 27.92,
+      "windSpeed": 2.24,
+      "pressure": 1009,
+      "windDirection": "W",
+      "createdAt": "2025-08-05T18:54:17.536Z",
+      "_id": "1a849820-9e49-4f3a-9b54-7d50e982394e",
+      "stationid": "f25afa58-d322-4989-964c-1776d933bf07"
+    },
+    {
+      "code": 802,
+      "description": "scattered clouds",
+      "temp": 28.88,
+      "windSpeed": 5.66,
+      "pressure": 1009,
+      "windDirection": "NW",
+      "createdAt": "2025-08-05T18:54:56.962Z",
+      "_id": "d8ba0673-fd2a-4461-bdea-bf55fcb24d78",
+      "stationid": "5f69e042-6e06-4ceb-ba97-40a7a1e35e00"
+    },
+    {
+      "code": 501,
+      "description": "moderate rain",
+      "temp": 17.8,
+      "windSpeed": 4.5,
+      "pressure": 1011,
+      "windDirection": "SW",
+      "createdAt": "2025-08-05T18:55:57.383Z",
+      "_id": "89731f48-e982-44e4-833a-15b3004a61a6",
+      "stationid": "ce727edf-f2f7-46ba-8ce5-d598cd93e9a3"
     }
   ]
 }

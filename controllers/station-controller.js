@@ -4,7 +4,7 @@ import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { summarizeStationWeather } from "../utils/weather-summary.js";
 
-export const dashboardController = {
+export const stationController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     //get all stations owned by the user

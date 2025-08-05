@@ -8,10 +8,10 @@
 */
 import express from "express";
 import { accountsController } from "./controllers/accounts-controller.js";
-import { dashboardController } from "./controllers/dashboard-controller.js";
+import { stationController } from "./controllers/station-controller.js";
 import { weatherTopController } from "./controllers/weather-top-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
-import { stationlistController } from "./controllers/stationlist-controller.js";
+import { reportController } from "./controllers/report-controller.js";
 
 // Create a modular router object
 export const router = express.Router();
@@ -30,28 +30,28 @@ router.post("/authenticate", accountsController.authenticate); //Handle login
 router.get("/logout", accountsController.logout); //Logout user
 
 //Dasboard routes
-router.get("/dashboard", dashboardController.index); //Dashboard page
-router.post("/dashboard/addstation", dashboardController.addStation); //Add new station
-router.get("/dashboard/deletestation/:id", dashboardController.deleteStation); //Delete station
+router.get("/dashboard", stationController.index); //Dashboard page
+router.post("/dashboard/addstation", stationController.addStation); //Add new station
+router.get("/dashboard/deletestation/:id", stationController.deleteStation); //Delete station
 
 //Station details page
-router.get("/station/:id", stationlistController.index); //View specific station
-router.post("/station/:id/addreport", stationlistController.addReport); //Add weather report
-router.post("/station/:id/update", dashboardController.updateStationDetails); //Update station title/location
-router.post("/station/:id/auto-report", dashboardController.autoGenerateReport); //Add live weather data from openWeather
+router.get("/station/:id", reportController.index); //View specific station
+router.post("/station/:id/addreport", reportController.addReport); //Add weather report
+router.post("/station/:id/update", stationController.updateStationDetails); //Update station title/location
+router.post("/station/:id/auto-report", stationController.autoGenerateReport); //Add live weather data from openWeather
 
 //Report management
 router.get(
   "/station/:stationid/deletereport/:reportid",
-  stationlistController.deleteReport
+  reportController.deleteReport
 ); //Delete report
 router.get(
   "/station/:stationid/editreport/:reportid",
-  stationlistController.editReport
+  reportController.editReport
 ); //Load edit report form
 router.post(
   "/station/:stationid/updatereport/:reportid",
-  stationlistController.updateReport
+  reportController.updateReport
 ); //Submit edit report
 
 // Controller to render the Weather Top view

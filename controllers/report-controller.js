@@ -8,7 +8,7 @@ import axios from "axios";
 
 const apiKey = "71d7cc3d2690016435b982c9101bd14b";
 
-export const stationlistController = {
+export const reportController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const stationId = request.params.id;
