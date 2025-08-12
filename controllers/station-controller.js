@@ -7,15 +7,12 @@ import { summarizeStationWeather } from "../utils/weather-summary.js";
 export const stationController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
-    //get all stations owned by the user
     const stations = await stationStore.getStationsByUserId(loggedInUser._id);
-    //Add summary info to each station
     const stationsWithSummary = stations.map((station) => ({
       ...station,
       summary: summarizeStationWeather(station),
     }));
 
-    //Sort alfabeticly by station title
     stationsWithSummary.sort((a, b) => a.title.localeCompare(b.title));
 
     const viewData = {
@@ -105,6 +102,6 @@ export const stationController = {
     };
 
     await stationStore.updateStationDetails(stationId, updatedData);
-    response.redirect(`/station/${stationId}`); // or /dashboard
+    response.redirect(`/station/${stationId}`);
   },
 };

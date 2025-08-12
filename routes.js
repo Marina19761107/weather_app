@@ -3,13 +3,11 @@
    - accountsController: login, signup, authentication
    - dashboardController: managing stations
    - stationlistController: handling individual station pages and reports
-   - weatherTopController: auto weather updates
    - aboutController: about page content
 */
 import express from "express";
 import { accountsController } from "./controllers/accounts-controller.js";
 import { stationController } from "./controllers/station-controller.js";
-import { weatherTopController } from "./controllers/weather-top-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
 import { reportController } from "./controllers/report-controller.js";
 
@@ -52,7 +50,4 @@ router.get(
 router.post(
   "/station/:stationid/updatereport/:reportid",
   reportController.updateReport
-); //Submit edit report
-
-// Controller to render the Weather Top view
-router.get("/weatherTop", weatherTopController.index);
+);

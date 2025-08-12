@@ -1,7 +1,7 @@
 //creating web server using Node.js and express
 import express from "express"; //Import the express library
-import bodyParser from "body-parser"; //Middleware to parse incoming reguest bodies (form data or JSON)
-import cookieParser from "cookie-parser"; //Middleware to parse cookies sent by clieants
+import bodyParser from "body-parser"; //Middleware to parse incoming request bodies (form data or JSON)
+import cookieParser from "cookie-parser"; //Middleware to parse cookies sent by clients
 import fileUpload from "express-fileupload"; //Middleware to handle file uploads
 import { engine } from "express-handlebars"; //Templating engine to render dynamic HTML pages
 import { router } from "./routes.js"; //import custom  router that define route handlers
@@ -9,7 +9,7 @@ import { router } from "./routes.js"; //import custom  router that define route 
 //Create an Express app instance, to define a routes and start the server
 const app = express();
 
-//middLeware setup
+//middleware setup
 app.use(cookieParser()); // Enable cookie handle
 app.use(bodyParser.urlencoded({ extended: false })); //Parse URL-encoded form data
 app.use(bodyParser.json()); //Parse JSON request bodies
@@ -22,7 +22,7 @@ app.engine(
   engine({
     extname: ".hbs", //File extension for Handlebars templates
     helpers: {
-      eq: (a, b) => a === b, // Custom helper for comparison in templates (cheks equality)
+      eq: (a, b) => a === b, // Custom helper for comparison in templates (checks equality)
     },
   })
 );

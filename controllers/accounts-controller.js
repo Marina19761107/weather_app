@@ -3,14 +3,14 @@ import { userStore } from "../models/user-store.js";
 export const accountsController = {
   index(request, response) {
     const viewData = {
-      title: "Login or Signup",
+      title: "Log in or Sign up",
     };
     response.render("index", viewData);
   },
 
   login(request, response) {
     const viewData = {
-      title: "Login to the Service",
+      title: "Log-in to the Service",
     };
     response.render("login-view", viewData);
   },
@@ -22,7 +22,7 @@ export const accountsController = {
 
   signup(request, response) {
     const viewData = {
-      title: "Login to the Service",
+      title: "Register",
     };
     response.render("signup-view", viewData);
   },

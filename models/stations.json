@@ -1,5 +1,5 @@
 {
-  "file": "./models/playlists.json",
+  "file": "./models/stations.json",
   "stations": [
     {
       "title": "Balbriggan",
