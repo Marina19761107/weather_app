@@ -3,13 +3,14 @@
 <section class="section">
   <div class="columns is-multiline mb-2">
   <div class="column is-full-mobile is-half-tablet is-full-desktop">
-  <h1 class="title">{{station.title}}</h1>
+  <h1 class="title">{{station.title}} - Station Details</h1>
 
   {{> station-summary station=station stationSummary=station.summary }}
-  {{> list-reports reports=station.reports }}
   {{> add-report station=station }}
+  {{> list-reports reports=station.reports }}
   {{> edit-report station=station }}
-  {{> chart station=station }}
+   {{> chart station=station }}
+
     </div>
 
  <div class="column is-full-mobile is-half-tablet is-full-desktop">

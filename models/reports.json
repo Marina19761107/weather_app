@@ -513,6 +513,72 @@
       "createdAt": "2025-08-13T11:17:34.760Z",
       "_id": "2bb9c637-8dce-448a-b036-fc13245bb26a",
       "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
+    },
+    {
+      "code": 801,
+      "description": "few clouds",
+      "temp": 20.35,
+      "windSpeed": 3.09,
+      "pressure": 1023,
+      "windDirection": 330,
+      "createdAt": "2025-08-13T16:57:13.544Z",
+      "_id": "acb2e662-70e4-482b-a24f-c91bbc9163f1",
+      "stationid": "7fb603fd-1e1d-4796-9d2c-54a1a9b9e662"
+    },
+    {
+      "code": 800,
+      "description": "clear sky",
+      "temp": 19.86,
+      "windSpeed": 1.03,
+      "pressure": 1022,
+      "windDirection": 0,
+      "createdAt": "2025-08-13T17:03:06.842Z",
+      "_id": "6a3cc7c5-cb2a-4a15-88d8-049b09212ff4",
+      "stationid": "9a067339-48c5-4447-a2d8-527cc9c7059b"
+    },
+    {
+      "code": 500,
+      "description": "light rain",
+      "temp": 18.89,
+      "windSpeed": 5.14,
+      "pressure": 1011,
+      "windDirection": 160,
+      "createdAt": "2025-08-13T18:07:10.114Z",
+      "_id": "d58378e5-da95-41a5-a91a-0805f69aa5b7",
+      "stationid": "5264b84b-1f46-47cb-939a-ea51a1374118"
+    },
+    {
+      "code": 801,
+      "description": "few clouds",
+      "temp": 23.45,
+      "windSpeed": 0.89,
+      "pressure": 1010,
+      "windDirection": 225,
+      "createdAt": "2025-08-13T18:07:32.422Z",
+      "_id": "2048be95-1ee4-4f57-b475-48e70ea0a630",
+      "stationid": "586adbca-f0c0-4e96-bd78-9e7c29bce130"
+    },
+    {
+      "code": 800,
+      "description": "clear sky",
+      "temp": 20.36,
+      "windSpeed": 4.13,
+      "pressure": 1012,
+      "windDirection": 247,
+      "createdAt": "2025-08-13T20:44:48.105Z",
+      "_id": "10b50f08-3b33-4173-a00b-518d2b0dca41",
+      "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
+    },
+    {
+      "code": 803,
+      "description": "broken clouds",
+      "temp": 19.36,
+      "windSpeed": 1.45,
+      "pressure": 1022,
+      "windDirection": "SE",
+      "createdAt": "2025-08-13T20:49:19.292Z",
+      "_id": "4727b2c2-911a-40ba-8878-253bf30a81df",
+      "stationid": "0552bd49-ded8-4b89-96bd-ef3c8856eefa"
     }
   ]
 }

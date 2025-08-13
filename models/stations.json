@@ -63,6 +63,27 @@
       "longitude": -2.1414,
       "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
       "_id": "7f77c840-8a20-4659-9aec-978a19521e0c"
+    },
+    {
+      "title": "Vilnius",
+      "latitude": 54.6871,
+      "longitude": 25.2796,
+      "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
+      "_id": "7fb603fd-1e1d-4796-9d2c-54a1a9b9e662"
+    },
+    {
+      "title": "Tallinn",
+      "latitude": 59.2613,
+      "longitude": 24.4512,
+      "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
+      "_id": "9a067339-48c5-4447-a2d8-527cc9c7059b"
+    },
+    {
+      "title": "Kyiv",
+      "latitude": 50.2408,
+      "longitude": 30.3156,
+      "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
+      "_id": "0552bd49-ded8-4b89-96bd-ef3c8856eefa"
     }
   ]
 }

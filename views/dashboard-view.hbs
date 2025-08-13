@@ -2,6 +2,7 @@
 
 <section class="section">
 <div class="columns is-multiline mb-2">
+  <h1 class="title has-text-link">{{title}}</h1>
     <div class="column is-full">
       {{> add-station}}
     </div>
@@ -15,7 +16,7 @@
     {{#each stations}}
     <div class="column is-full">
         {{> station-summary station=this stationSummary=this.stationSummary}}
-        {{> update-station}}  
+          {{> update-station}}  
 
       </div>
     {{/each}}

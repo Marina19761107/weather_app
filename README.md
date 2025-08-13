@@ -57,19 +57,21 @@ https://github.com/Marina19761107/weather_app
 
 Resources:
 
-- [Express_Nodejs]https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs
-  https://www.npmjs.com/package/express-handlebars
-  https://www.npmjs.com/package/body-parser
-  https://www.npmjs.com/package/cookie-parser
-  https://www.npmjs.com/package/express-fileupload
-  https://handlebarsjs.com/guide/#custom-helpers
-  https://www.npmjs.com/package/express-handlebars#helpers
-- [Node.js Official Documentation](https://nodejs.org/en/docs/)
-- [Express.js Guide](https://expressjs.com/)
-- [Handlebars.js Documentation](https://handlebarsjs.com/)
-- [Bulma CSS Framework](https://bulma.io/documentation/)
 - [Axios HTTP Client](https://axios-http.com/docs/intro)
+- [body-parser]https://www.npmjs.com/package/body-parser
+- [Bulma CSS Framework](https://bulma.io/documentation/)
+- [cookie-parser] https://www.npmjs.com/package/cookie-parser
+- [custom-helpers]https://handlebarsjs.com/guide/#custom-helpers
 - [Day.js Documentation](https://day.js.org/docs/en/installation/installation)
+- [docs]https://render.com/docs
+- [Express_Nodejs]https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs
+- [express-handlebars]https://www.npmjs.com/package/express-handlebars
+- [express-fileupload]https://www.npmjs.com/package/express-fileupload
+- [express-handlebars#helpers]https://www.npmjs.com/package/express-handlebars#helpers
+- [Express.js Guide](https://expressjs.com/)
+- [git-cheat-sheet-education]https://education.github.com/git-cheat-sheet-education.pdf
+- [Handlebars.js Documentation](https://handlebarsjs.com/)
 - [Leaflet.js Documentation](https://leafletjs.com/reference.html)
+- [Node.js Official Documentation](https://nodejs.org/en/docs/)
 - [OpenWeatherMap API Documentation](https://openweathermap.org/api)
 - [OpenWeatherMap Weather Conditions](https://openweathermap.org/weather-conditions)

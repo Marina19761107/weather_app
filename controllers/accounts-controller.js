@@ -10,7 +10,7 @@ export const accountsController = {
 
   login(request, response) {
     const viewData = {
-      title: "Log in to the Service",
+      title: "Log in to the APP",
     };
     response.render("login-view", viewData);
   },

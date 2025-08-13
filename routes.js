@@ -31,13 +31,11 @@ router.get("/dashboard", stationController.index); //Dashboard page
 router.post("/dashboard/addstation", stationController.addStation); //Add new station
 router.get("/dashboard/deletestation/:id", stationController.deleteStation); //Delete station
 
-//Station details page
+//Station details page and report management
 router.get("/station/:id", reportController.index); //View specific station
 router.post("/station/:id/addreport", reportController.addReport); //Add weather report
 router.post("/station/:id/update", stationController.updateStationDetails); //Update station title/location
-router.post("/station/:id/auto-report", stationController.autoGenerateReport); //Add live weather data from openWeather
-
-//Report management
+router.post("/station/:id/auto-report", reportController.autoGenerateReport); //Add live weather data from openWeather
 router.get(
   "/station/:stationid/deletereport/:reportid",
   reportController.deleteReport
@@ -49,4 +47,4 @@ router.get(
 router.post(
   "/station/:stationid/updatereport/:reportid",
   reportController.updateReport
-);
+); //update report

@@ -74,6 +74,39 @@ export const reportController = {
     response.redirect("/station/" + station._id);
   },
 
+  async autoGenerateReport(request, response) {
+    const stationId = request.params.id;
+    const station = await stationStore.getStationById(stationId);
+
+    if (!station) {
+      return response.status(404).send("Station not found");
+    }
+
+    const lat = station.latitude;
+    const lon = station.longitude;
+    const apiKey = "71d7cc3d2690016435b982c9101bd14b";
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+    const result = await axios.get(weatherUrl);
+
+    if (result.status === 200) {
+      const data = result.data;
+      const newReport = {
+        code: data.weather[0].id,
+        description: data.weather[0].description,
+        temp: data.main.temp,
+        windSpeed: data.wind.speed,
+        pressure: data.main.pressure,
+        windDirection: data.wind.deg,
+        createdAt: new Date(),
+      };
+
+      await reportStore.addReport(stationId, newReport);
+    }
+
+    response.redirect(`/station/${stationId}`);
+  },
+
   async deleteReport(request, response) {
     const stationId = request.params.stationid;
     const reportId = request.params.reportid;
