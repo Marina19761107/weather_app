@@ -43,17 +43,17 @@ https://github.com/Marina19761107/weather_app
 
 ## Technologies
 
-- HTML
-- JavaScript
-- [Day.js](https://day.js.org/) (for date formatting)
-- [Axios](https://axios-http.com/)
-- [Bulma](https://bulma.io/) CSS framework
-- [Leaflet.js](https://leafletjs.com/) (for interactive maps)
-- [OpenWeatherMap Weather Conditions API](https://openweathermap.org/weather-conditions)
-- Node.js
-- https://www.npmjs.com/
-- Express (backend framework)
-- Handlebars (templating engine)
+- HTML — For structuring the content of the web pages.
+- JavaScript — For adding interactivity and dynamic behavior.
+- Day.js — A lightweight library for date manipulation and formatting.
+- Axios — A promise-based HTTP client for making API requests.
+- Bulma — A modern CSS framework.
+- Leaflet.js — A library for creating interactive maps.
+- OpenWeatherMap Weather Conditions API — Provides weather data and forecasts.
+- Node.js — A JavaScript runtime for building server-side applications.
+- npm — The Node.js package manager for installing and managing.
+- Express — A web application framework for Node.js, used to build server-side applications and APIs.
+- Handlebars — A templating engine that helps in rendering dynamic content on the server side.
 
 Resources:
 
