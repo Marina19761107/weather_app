@@ -1,3 +1,9 @@
+/*Initializes and connects a LowDB JSON database for a given data type
+This function:
+ -Creates a JSON file if it doesn't exist;
+ -Sets up a LowDB database instance using that file;
+ -Returns the LowDB instance so you can read/write data.
+ */
 import { Low } from "lowdb";
 import { JSONFile } from "lowdb/node";
 import * as fs from "fs";

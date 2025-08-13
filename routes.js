@@ -13,7 +13,6 @@ import { reportController } from "./controllers/report-controller.js";
 export const router = express.Router();
 
 //Router - find matching controller object
-//Router behavior
 //Landing pages
 router.get("/", accountsController.index); //Start
 router.get("/about", (req, res) => {
