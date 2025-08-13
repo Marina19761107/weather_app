@@ -3,12 +3,10 @@
    - accountsController: login, signup, authentication
    - dashboardController: managing stations
    - stationlistController: handling individual station pages and reports
-   - aboutController: about page content
 */
 import express from "express";
 import { accountsController } from "./controllers/accounts-controller.js";
 import { stationController } from "./controllers/station-controller.js";
-import { aboutController } from "./controllers/about-controller.js";
 import { reportController } from "./controllers/report-controller.js";
 
 // Create a modular router object
@@ -18,7 +16,9 @@ export const router = express.Router();
 //Router behavior
 //Landing pages
 router.get("/", accountsController.index); //Start
-router.get("/about", aboutController.index); //About page
+router.get("/about", (req, res) => {
+  res.render("about-view", { title: "Weather App" });
+});
 
 //Authentication routes
 router.get("/login", accountsController.login); //Login form

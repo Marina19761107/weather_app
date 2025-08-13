@@ -480,6 +480,39 @@
       "createdAt": "2025-08-05T18:55:57.383Z",
       "_id": "89731f48-e982-44e4-833a-15b3004a61a6",
       "stationid": "ce727edf-f2f7-46ba-8ce5-d598cd93e9a3"
+    },
+    {
+      "code": 803,
+      "description": "broken clouds",
+      "temp": 28.28,
+      "windSpeed": 2.57,
+      "pressure": 1013,
+      "windDirection": "SE",
+      "createdAt": "2025-08-13T10:39:29.439Z",
+      "_id": "3851d827-695a-4be0-a2d7-0763fe91b13f",
+      "stationid": "7f77c840-8a20-4659-9aec-978a19521e0c"
+    },
+    {
+      "code": 803,
+      "description": "broken clouds",
+      "temp": 28.28,
+      "windSpeed": 2.57,
+      "pressure": 1013,
+      "windDirection": 160,
+      "createdAt": "2025-08-13T10:40:30.851Z",
+      "_id": "9d89b251-1cb7-4333-9fcd-ba54456ef658",
+      "stationid": "7f77c840-8a20-4659-9aec-978a19521e0c"
+    },
+    {
+      "code": 801,
+      "description": "few clouds",
+      "temp": 21.98,
+      "windSpeed": 3.08,
+      "pressure": 1013,
+      "windDirection": "E",
+      "createdAt": "2025-08-13T11:17:34.760Z",
+      "_id": "2bb9c637-8dce-448a-b036-fc13245bb26a",
+      "stationid": "35e6fe3f-f0b1-4962-9edb-5390d6620488"
     }
   ]
 }

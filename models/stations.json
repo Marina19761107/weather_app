@@ -56,6 +56,13 @@
       "longitude": 24.0621,
       "userid": "cd7fe46f-b82a-4a9d-a57d-660fe927958f",
       "_id": "ce727edf-f2f7-46ba-8ce5-d598cd93e9a3"
+    },
+    {
+      "title": "Manchester",
+      "latitude": 53.2851,
+      "longitude": -2.1414,
+      "userid": "67045885-48c1-41b1-9dc2-10d2bae8965f",
+      "_id": "7f77c840-8a20-4659-9aec-978a19521e0c"
     }
   ]
 }
