@@ -25,8 +25,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     const burger = document.getElementById("burger");
     const navMenu = document.getElementById("navMenu");
-
-    // Check if burger and navMenu exist before adding event listener
+    
     if (burger && navMenu) {
       burger.addEventListener("click", () => {
         navMenu.classList.toggle("is-active");
@@ -35,7 +34,6 @@
       console.error("Burger or navMenu elements are missing.");
     }
 
-    // Handling active class for menu items
     const activeMenuItem = document.getElementById("{{active}}");
     if (activeMenuItem) {
       activeMenuItem.classList.add("is-link");
