@@ -1,6 +1,5 @@
 import axios from "axios";
 import { stationStore } from "../models/station-store.js";
-import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { summarizeStationWeather } from "../utils/weather-summary.js";
 

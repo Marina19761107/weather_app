@@ -1,6 +1,12 @@
 <nav class="navbar mb-6">
   <div class="navbar-brand">
     {{> weatherTop}}
+
+    <button class="navbar-burger" id="burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
   </div>
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-end">
@@ -16,5 +22,25 @@
 </nav>
 
 <script>
-  document.getElementById("{{active}}").classList.add("is-link");
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.getElementById("burger");
+    const navMenu = document.getElementById("navMenu");
+
+    // Check if burger and navMenu exist before adding event listener
+    if (burger && navMenu) {
+      burger.addEventListener("click", () => {
+        navMenu.classList.toggle("is-active");
+      });
+    } else {
+      console.error("Burger or navMenu elements are missing.");
+    }
+
+    // Handling active class for menu items
+    const activeMenuItem = document.getElementById("{{active}}");
+    if (activeMenuItem) {
+      activeMenuItem.classList.add("is-link");
+    } else {
+      console.error("Active menu item not found.");
+    }
+  });
 </script>
